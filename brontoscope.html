@@ -59,14 +59,17 @@
     <p id="text"></p>
     </div>
     <a href="https://scholarworks.umass.edu/cgi/viewcontent.cgi?referer=https://www.google.com/&httpsredir=1&article=1137&context=etruscan_studies"><p>Learn more about the Etruscan Brontoscopic Calendar</p></a>
-
+    <p>Search for entry by date ( mm/dd ) <br> note: currently English only <br></p>
+            <input type="text" id="search">
+            <button onclick="searchFunction()">search</button>
+            <pre id="searchResult"></pre>
 <script src="brontoscope.js"></script>
 <script>
 var today = new Date()
 var dd = today.getDate();
 var mm = today.getMonth()+1;
 
-
+ 
 if(dd<10) {
     dd = '0'+dd
 } 
@@ -89,6 +92,12 @@ function printDate(){
 }
 function headline(){
     document.getElementById("headline").innerHTML = "Your daily Brontoscope:"
+}
+function searchFunction(){
+    searchDate = document.getElementById("search").value;
+    document.getElementById("searchResult").innerHTML = calendar[searchDate];
+    console.log("searchFunction happened!" )
+    console.log(calendar[searchDate])
 }
 printDate()
 printBrontoscope()
