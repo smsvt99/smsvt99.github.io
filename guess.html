@@ -1,18 +1,53 @@
-<!DOCTYPE=html>
+<!-- <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+<style>
+</style>
+    <script src="guessforweb.js"></script>
+</head>
 <body>
-    <h1>Number Guesser Name</h1>
+    <h1>Magic Number Guesser</h1>
     <pre id="field"></pre>
-    <button onclick="higher()">higher</button>
-    <button onclick="correct()">yes!</button>
-    <button onclick="lower">lower</button>
-<script src="guessforweb.html"></script>
-<script>
-function say(message){
-   document.getElementById('field').innerText += '\n' + message;
+    <button onclick="higher()">Higher</button>
+    <button onclick="correct()">Yes!</button>
+    <button onclick="lower()">Lower</button>
+    <button onclick="newGame()">New Game</button>
+    </div>
 
-}
+<script>
+    start()
+
+    function say(message){
+    document.getElementById('field').innerText += '\n' + message;
+
+    }
+
+</script>
+</body>   
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+    <script src="guessforweb.js"></script>
+</head>
+<body>
+    <h1>Magic Number Guesser</h1>
+    <pre id="field"></pre>
+    <button onclick="higher()">Higher</button>
+    <button onclick="correct()">Yes!</button>
+    <button onclick="lower()">Lower</button>
+    <button onclick="newGame()">New Game</button>
+
+<script>
+    start()
+
+    function say(message){
+    document.getElementById('field').innerText += '\n' + message;
+
+    }
+
 </script>
 </body>   
 </html>
