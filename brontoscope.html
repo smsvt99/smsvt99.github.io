@@ -47,6 +47,24 @@
        top:500px;
        left: 325px;
    }
+   #searchDiv{
+       position: absolute;
+       top: 600px;
+       left: 100px;
+   }
+   #searchResultDiv{
+       position:absolute;
+       top: 750px;
+       left: 200px;
+        border-width: 5px;
+        border-color:black;
+        border-style: double;
+        background: lightgrey;
+        font-size: 30px;
+        padding: 20px;
+        font-style: italic;
+        width: auto;
+   }
 </style>
 </head>
 <body>
@@ -59,10 +77,15 @@
     <p id="text"></p>
     </div>
     <a href="https://scholarworks.umass.edu/cgi/viewcontent.cgi?referer=https://www.google.com/&httpsredir=1&article=1137&context=etruscan_studies"><p>Learn more about the Etruscan Brontoscopic Calendar</p></a>
+<div id="searchDiv">
     <p>Search for entry by date ( mm/dd ) <br> note: currently English only <br></p>
-            <input type="text" id="search">
-            <button onclick="searchFunction()">search</button>
-            <pre id="searchResult"></pre>
+    <input type="text" id="search" value="01/01">
+    <button onclick="searchFunctions()">search</button>
+</div>
+<div id="searchResultDiv">
+    <p id="grkSearchResult"></p>
+    <p id="searchResult"></p>
+</div>    
 <script src="brontoscope.js"></script>
 <script>
 var today = new Date()
@@ -91,13 +114,20 @@ function printDate(){
     document.getElementById("date").innerHTML = today;
 }
 function headline(){
-    document.getElementById("headline").innerHTML = "Your daily Brontoscope:"
+    document.getElementById("headline").innerHTML = "Today's Brontoscope:"
+}
+function searchFunctions(){
+    searchFunction()
+    grkSearchFunction()
 }
 function searchFunction(){
     searchDate = document.getElementById("search").value;
     document.getElementById("searchResult").innerHTML = calendar[searchDate];
-    console.log("searchFunction happened!" )
-    console.log(calendar[searchDate])
+}
+
+function grkSearchFunction(){
+    grkSearchDate = document.getElementById("search").value;
+    document.getElementById("grkSearchResult").innerHTML = grkCalendar[grkSearchDate];
 }
 printDate()
 printBrontoscope()
