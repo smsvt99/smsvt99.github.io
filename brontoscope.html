@@ -20,7 +20,7 @@
        
     }
    body{
-       background:lightcoral
+       background:lightcoral;
    
    }
    #div{
@@ -71,7 +71,7 @@
     <div id="div">
     <p id="date"></p>
     <p id="headline"></p>
-   </div>
+   </div><
     <div id="texts">
     <p id="grkText"></p>
     <p id="text"></p>
@@ -85,7 +85,15 @@
 <div id="searchResultDiv">
     <p id="grkSearchResult"></p>
     <p id="searchResult"></p>
-</div>    
+</div>
+<div id="lemmaSearchDiv">
+        <p>Search for English lemma<br></p>
+        <input type="text" id="lemmaSearchID" value="king">
+        <button onclick="lemmaSearch()">search</button>
+</div>
+<div id="lemmaSearchResultDiv">
+    <p id="lemmaSearchResult"></p>
+</div>
 <script src="brontoscope.js"></script>
 <script>
 var today = new Date()
@@ -129,6 +137,14 @@ function grkSearchFunction(){
     grkSearchDate = document.getElementById("search").value;
     document.getElementById("grkSearchResult").innerHTML = grkCalendar[grkSearchDate];
 }
+
+// function lemmaSearch(){
+//     for (let calendars in calendar){
+//         if ()
+//         console.log(calendar)
+//     }}
+//     //document.getElementById("lemmaSearchResult").innerHTML = 
+
 printDate()
 printBrontoscope()
 printGrkBrontoscope()

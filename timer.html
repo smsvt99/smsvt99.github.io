@@ -1,0 +1,44 @@
+<html>
+<head>
+    <style>
+    input{
+        height: 50px;
+        width: 920px;
+        font-size: 5px;
+    }
+    </style>
+</head>
+<body>
+    <h1>How long does it take to type 686 exclamation points?</h1>
+    
+    <p>Directions:<br></p> 
+    <ul>
+        <li>press and hold shift + 1</li>
+        <li>watch the tiny exclamation points populate the field</li>
+        <li>input will stop automatically after you have made 686 of them</li>
+        <li>when you see that input has stopped, quickly lift your fingers</li>
+        <li>don't hit any more buttons! Refresh if you want to play again.</li>
+        <li>Ps: it doesn't actually work right? Maybe?</li>
+        <li>CHALLENGE: can you make a better one?</li>
+    </ul>
+
+   
+    <input focus font-size="50px" id="input" maxlength="686" onkeyup="stopTimer()" type="text">    
+    
+    <p id=result></p>
+        <script>
+        document.getElementById("input").addEventListener("keydown", startTimer());
+
+       
+       function startTimer(){
+            startTime = new Date;
+            document.getElementById("input").removeEventListener
+        }
+        
+        function stopTimer(){
+            stopTime = new Date;
+            document.getElementById("result").innerHTML = ("Wow! It took " + (stopTime.getTime() - startTime.getTime())/1000 + " seconds!")
+        }
+        
+        </script>
+</body>
