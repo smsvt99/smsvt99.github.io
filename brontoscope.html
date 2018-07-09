@@ -68,10 +68,11 @@
 </style>
 </head>
 <body>
+ 
     <div id="div">
     <p id="date"></p>
     <p id="headline"></p>
-   </div><
+   </div>
     <div id="texts">
     <p id="grkText"></p>
     <p id="text"></p>
@@ -96,6 +97,7 @@
 </div>
 <script src="brontoscope.js"></script>
 <script>
+let latAndLong;
 var today = new Date()
 var dd = today.getDate();
 var mm = today.getMonth()+1;
@@ -145,10 +147,28 @@ function grkSearchFunction(){
 //     }}
 //     //document.getElementById("lemmaSearchResult").innerHTML = 
 
+
+
+function showPosition(position) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    // console.log("Latitude: " + position.coords.latitude + 
+    // " Longitude: " + position.coords.longitude);
+    latAndLong = position.coords.latitude + "," + position.coords.longitude;
+    console.log(latAndLong);
+    fetch("https://api.weather.gov/points/" + latAndLong)
+        .then (function (response){
+            return response
+            console.log(response)
+
+        })
+}
+
+
 printDate()
 printBrontoscope()
 printGrkBrontoscope()
 headline()
+showPosition()
 </script>
 </body>
 </html>
