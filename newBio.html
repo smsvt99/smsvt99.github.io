@@ -1,52 +1,175 @@
+<html>
+
 <head>
-    <style type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: url('bioBackground.jpg') no-repeat;
+            background-position: center;
+            background-size: 120%;
+            font-family: Source Code Pro;
+            color: whitesmoke;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 57px;
+            border-color: whitesmoke;
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 5px;
+            border-left-width: 25px;
+            border-right-width: 25px;
+            padding-top: 3px;
+            padding-bottom: 12px;
+            text-align: center;
+            margin: 2%;
+        }
+
+        .button {
+            float: left;
+            color: whitesmoke;
+            width: 15%;
+            text-align: center;
+            padding: 14px 16px;
+            display: block;
+            font-size: 25px;
+            border-color: whitesmoke;
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 5px;
+            border-left-width: 10px;
+            border-right-width: 10px;
+            padding-top: 3px;
+            padding-bottom: 12px;
+            margin: 2%;
+            margin-left: 5%;
+            margin-top: 0;
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button:hover {
+            background: white;
+            color: rgb(43, 19, 19);
+        }
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        h1:hover {
+            color: rgb(43, 19, 19);
+            background: whitesmoke;
+        }
+
         .tg {
             border-collapse: collapse;
             border-spacing: 0;
+            margin-top: 5%;
+            cursor: pointer;
+            position: absolute;
+            bottom: 2%;
         }
 
         .tg td {
-            padding: 30px 30px;
-            border-style: solid;
-            border-width: 1px;
+            padding: 20px;
+            /* border-style: solid; */
+            /* border-width: 1px; */
             overflow: hidden;
-            border-color: white;
+            /* border-color: white; */
         }
 
         .tg th {
-            padding: 30px 30px;
-            border-style: solid;
-            border-width: 1px;
+            padding: 20px;
+            /* border-style: solid; */
+            /* border-width: 1px; */
             overflow: hidden;
             /* word-break:normal; */
-            border-color: white;
+            /* border-color: white; */
         }
 
         .tg-0lax {
-            background-color: rgb(43, 19, 19);
+            background-color: whitesmoke;
         }
     </style>
-    </style>
+</head>
 
-    <body>
-        
+<body>
+    <div id="overlay"></div>
+    <a onclick="fade('newIndex.html')" href="#">
+        <h1>Sean Michael Stone
+        </h1>
+    </a>
+    <div class="container">
+        <a class="button" onclick="fade('newBio.html')" href="#">Bio</a>
+        <a class="button" onclick="fade()" href="#">Projects</a>
+        <a class="button" onclick="fade()" href="#">Contact</a>
+    </div>
+    <div class="container">
         <table class="tg">
             <tr>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <!-- <td class="tg-0lax"></td> -->
+                <!-- <td class="tg-0lax"></td> -->
+                <!-- <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td> -->
+                <!-- <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td> -->
             </tr>
             <tr>
                 <td class="tg-0lax"></td>
@@ -64,8 +187,6 @@
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
-            </tr>
-            <tr>
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
@@ -81,112 +202,91 @@
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
-            </tr>
-            <tr>
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
+                <!-- <td class="tg-0lax"></td> -->
+                <!-- <td class="tg-0lax"></td> -->
+                <!-- <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td> -->
+                <!-- <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td> -->
             </tr>
         </table>
-        <script>
-            let squares = document.getElementsByClassName("tg-0lax");
-
-            function logs(event) {
-                if (event.target.color === 'brown') {
-                    event.target.color = 'white';
-                    event.target.style.opacity = 0;
-                } else {
-                    event.target.color = 'brown';
-                    event.target.style.opacity = 1;
-                }
+    </div>
+    <script>
+        //fadeout and change file
+        let opacity = 0;
+        function fade(filename) {
+            console.log(filename)
+            document.getElementById('overlay').style.zIndex = 1;
+            document.getElementById('overlay').style.opacity = opacity;
+            changeOpacity(filename);
+        }
+        function changeOpacity(filename) {
+            console.log(filename)
+            if (opacity > 1) {
+                window.location.href = filename
+            } else {
+                opacity = opacity + .1
+                setTimeout(function () { fade(filename) }, 30)
             }
+        }
+        //pixely toy
+        let squares = document.getElementsByClassName("tg-0lax");
 
-            function addListeners() {
-                for (let i = 0; i < squares.length; i++) {
-                    squares[i].addEventListener('mouseover', logs);
-                    squares[i].color = 'brown';
-                }
+        function handleMouseover(){
+
+        }
+
+        function addListeners() {
+            for (let i = 0; i < squares.length; i++) {
+                squares[i].addEventListener('click', loopAndSortSquares);
+                loopAndSortSquares();
             }
-            addListeners();
-        </script>
-    </body>
+        }
+
+        function loopAndSortSquares() {
+            for (let i = 0; i < squares.length; i++) {
+               assignColor(.3, i)
+            }
+        }
+        
+        function assignColor(num, i) {
+            let randomNumber = Math.random()
+            if (randomNumber > num) {
+                squares[i].color = 'white';
+                squares[i].style.opacity = 0;
+            } else {
+                squares[i].color = 'brown';
+                randomColor(i);
+            }
+        }
+        
+        function randomColor(i) {
+            let secondRandomNumber = Math.random();
+                squares[i].style.opacity = secondRandomNumber;
+                if (secondRandomNumber.toPrecision(2) === '0.11') {
+                    squares[i].style.backgroundColor = 'red';
+                } else if (secondRandomNumber.toPrecision(2) === '0.22') {
+                    squares[i].style.backgroundColor = 'orange';
+                } else if (secondRandomNumber.toPrecision(2) === '0.33') {
+                    squares[i].style.backgroundColor = 'yellow';
+                } else if (secondRandomNumber.toPrecision(2) === '0.44') {
+                    squares[i].style.backgroundColor = 'green';
+                } else if (secondRandomNumber.toPrecision(2) === '0.55') {
+                    squares[i].style.backgroundColor = 'blue';
+                } else if (secondRandomNumber.toPrecision(2) === '0.66') {
+                    squares[i].style.backgroundColor = 'indigo';
+                } else if (secondRandomNumber.toPrecision(2) === '0.77') {
+                    squares[i].style.backgroundColor = 'violet';
+                } else if (secondRandomNumber.toPrecision(2) === '0.88') {
+                    squares[i].style.backgroundColor = 'white';
+                }
+        }
+        addListeners();
+    </script>
+</body>
+
+</html>

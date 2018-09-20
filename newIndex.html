@@ -28,7 +28,7 @@
 
         .button {
             float: left;
-            color: black;
+            color: rgb(43, 19, 19);
             width: 15%;
             text-align: center;
             padding: 14px 16px;
@@ -80,10 +80,14 @@
             color: white;
             background: rgb(43, 19, 19);
         }
+
         .tg {
             border-collapse: collapse;
             border-spacing: 0;
             margin-top: 5%;
+            cursor: pointer;
+            position: absolute;
+            bottom: 2%;
         }
 
         .tg td {
@@ -106,12 +110,15 @@
         .tg-0lax {
             background-color: rgb(43, 19, 19);
         }
+        #animateButton {
+            width: 25%;
+        }
     </style>
 </head>
 
 <body>
     <div id="overlay"></div>
-    <a onclick="fade()" href="#">
+    <a onclick="fade('newIndex.html')" href="#">
         <h1>Sean Michael Stone
         </h1>
     </a>
@@ -120,8 +127,9 @@
         <a class="button" onclick="fade()" href="#">Projects</a>
         <a class="button" onclick="fade()" href="#">Contact</a>
     </div>
+
     <div class="container">
-    <table class="tg">
+        <table class="tg">
             <tr>
                 <th class="tg-0lax"></th>
                 <th class="tg-0lax"></th>
@@ -479,77 +487,90 @@
             }
         }
         //pixely toy
-        let squares = document.getElementsByClassName("tg-0lax");
 
-        function handleMouseover(event) {
-            if (event.target.color === 'brown') {
-                event.target.color = 'white';
-                event.target.style.opacity = 0;
+        let squares = document.getElementsByClassName("tg-0lax");
+        let counter = 1
+        let animationing;
+        
+       
+        
+        function animateSquares(){
+            loopAndSortSquares();
+            animationing = setTimeout("animateSquares()", 1250);
+        }
+        
+        function handleClick(){
+            counter++
+            if (counter % 2 === 0){
+                animateSquares();
             } else {
-                event.target.color = 'brown';
-                event.target.style.opacity = 1;
+                console.log('ya elsed!');
+                clearTimeout(animationing);
             }
+
         }
 
         function addListeners() {
             for (let i = 0; i < squares.length; i++) {
-                squares[i].addEventListener('mouseover', handleMouseover);
+                squares[i].addEventListener('click', handleClick);
                 loopAndSortSquares();
             }
-            setTimeout(addListeners, 1000)
         }
 
-        function loopAndSortSquares(){
+        function loopAndSortSquares() {
             for (let i = 0; i < squares.length; i++) {
-                if (i < 32){
+                if (i < 32) {
                     assignColor(.1, i)
-                } else if (i < 64){
+                } else if (i < 64) {
                     assignColor(.2, i)
-                } else if (i < 96){
+                } else if (i < 96) {
                     assignColor(.3, i)
-                } else if (i < 128){
+                } else if (i < 128) {
                     assignColor(.4, i)
-                } else if (i < 160){
+                } else if (i < 160) {
                     assignColor(.5, i)
-                } else if (i < 192){
+                } else if (i < 192) {
                     assignColor(.6, i)
-                } else if (i < 224){
+                } else if (i < 224) {
                     assignColor(.7, i)
-                } else if (i < 256){
+                } else if (i < 256) {
                     assignColor(.8, i)
                 }
-            }    
+            }
         }
-        function assignColor(num, i){
+        function assignColor(num, i) {
             let randomNumber = Math.random()
             if (randomNumber > num) {
-                    squares[i].color = 'white';
-                    squares[i].style.opacity = 0;
-                } else {
-                    let secondRandomNumber = Math.random();
-                    squares[i].color = 'brown';
-                    squares[i].style.opacity = secondRandomNumber;
-                    if (secondRandomNumber.toPrecision(5) === '0.11111'){
-                        squares[i].style.backgroundColor = 'red';
-                    } else if (secondRandomNumber.toPrecision(5) === '0.22222'){
-                        squares[i].style.backgroundColor = 'orange';
-                    } else if (secondRandomNumber.toPrecision(5) === '0.33333'){
-                        squares[i].style.backgroundColor = 'yellow';
-                    } else if (secondRandomNumber.toPrecision(5) === '0.44444'){
-                        squares[i].style.backgroundColor = 'green';
-                    } else if (secondRandomNumber.toPrecision(5) === '0.55555'){
-                        squares[i].style.backgroundColor = 'blue';   
-                    } else if (secondRandomNumber.toPrecision(5) === '0.66666'){
-                        squares[i].style.backgroundColor = 'indigo';
-                    } else if (secondRandomNumber.toPrecision(5) === '0.77777'){
-                        squares[i].style.backgroundColor = 'violet';
-                    } else if (secondRandomNumber.toPrecision(5) === '0.88888'){
-                        squares[i].style.backgroundColor = 'white'; 
-                    } else if (secondRandomNumber.toPrecision(5) === '0.99999'){
-                        squares[i].style.backgroundColor = 'rgb(43, 19, 19)';
-                    }
+                squares[i].color = 'white';
+                squares[i].style.opacity = 0;
+            } else {
+                squares[i].color = 'brown';
+                randomColor(i);
+            }
         }
-    }
+        function randomColor(i) {
+            let secondRandomNumber = Math.random();
+                squares[i].style.opacity = secondRandomNumber;
+                if (secondRandomNumber.toPrecision(3) === '0.111') {
+                    squares[i].style.backgroundColor = 'red';
+                } else if (secondRandomNumber.toPrecision(4) === '0.2222') {
+                    squares[i].style.backgroundColor = 'orange';
+                } else if (secondRandomNumber.toPrecision(3) === '0.333') {
+                    squares[i].style.backgroundColor = 'yellow';
+                } else if (secondRandomNumber.toPrecision(4) === '0.4444') {
+                    squares[i].style.backgroundColor = 'green';
+                } else if (secondRandomNumber.toPrecision(3) === '0.555') {
+                    squares[i].style.backgroundColor = 'blue';
+                } else if (secondRandomNumber.toPrecision(3) === '0.666') {
+                    squares[i].style.backgroundColor = 'indigo';
+                } else if (secondRandomNumber.toPrecision(3) === '0.777') {
+                    squares[i].style.backgroundColor = 'violet';
+                } else if (secondRandomNumber.toPrecision(3) === '0.888') {
+                    squares[i].style.backgroundColor = 'white';
+                } else if (secondRandomNumber.toPrecision(2) === '0.99') {
+                    squares[i].style.backgroundColor = 'rgb(43, 19, 19)'
+                }
+        }
         addListeners();
     </script>
 </body>
