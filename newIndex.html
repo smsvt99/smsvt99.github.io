@@ -496,7 +496,7 @@
                 squares[i].addEventListener('mouseover', handleMouseover);
                 loopAndSortSquares();
             }
-            setTimeout(addListeners, 2000)
+            setTimeout(addListeners, 1000)
         }
 
         function loopAndSortSquares(){
@@ -530,22 +530,24 @@
                     squares[i].color = 'brown';
                     squares[i].style.opacity = secondRandomNumber;
                     if (secondRandomNumber.toPrecision(5) === '0.11111'){
-                        squares[i].style.backgroundColor = 'red'
+                        squares[i].style.backgroundColor = 'red';
                     } else if (secondRandomNumber.toPrecision(5) === '0.22222'){
-                        squares[i].style.backgroundColor = 'orange'
+                        squares[i].style.backgroundColor = 'orange';
                     } else if (secondRandomNumber.toPrecision(5) === '0.33333'){
-                        squares[i].style.backgroundColor = 'yellow'
+                        squares[i].style.backgroundColor = 'yellow';
                     } else if (secondRandomNumber.toPrecision(5) === '0.44444'){
-                        squares[i].style.backgroundColor = 'green'
+                        squares[i].style.backgroundColor = 'green';
                     } else if (secondRandomNumber.toPrecision(5) === '0.55555'){
-                        squares[i].style.backgroundColor = 'blue'   
+                        squares[i].style.backgroundColor = 'blue';   
                     } else if (secondRandomNumber.toPrecision(5) === '0.66666'){
-                        squares[i].style.backgroundColor = 'indigo'
+                        squares[i].style.backgroundColor = 'indigo';
                     } else if (secondRandomNumber.toPrecision(5) === '0.77777'){
-                        squares[i].style.backgroundColor = 'violet'
+                        squares[i].style.backgroundColor = 'violet';
                     } else if (secondRandomNumber.toPrecision(5) === '0.88888'){
-                        squares[i].style.backgroundColor = 'white' 
-                }
+                        squares[i].style.backgroundColor = 'white'; 
+                    } else if (secondRandomNumber.toPrecision(5) === '0.99999'){
+                        squares[i].style.backgroundColor = 'rgb(43, 19, 19)';
+                    }
         }
     }
         addListeners();
