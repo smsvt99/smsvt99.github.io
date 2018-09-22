@@ -92,7 +92,7 @@
         }
 
         .tg td {
-            padding: 2vw;
+            padding: 20px;
             /* height: 3%;
             width: 3%; */
             /* border-style: solid; */
@@ -102,7 +102,7 @@
         }
 
         .tg th {
-            padding: 1vh;
+            /* padding: 20px */
             /* height: 3%;
             width: 3%; */
             /* border-style: solid; */
@@ -576,7 +576,20 @@
                     squares[i].style.opacity = 0;
                 }
         }
+        function setPadding(){
+            let pageWidth = document.documentElement.clientWidth;
+            let squareWidth = pageWidth / 64 + 'px'
+            console.log(pageWidth)
+            console.log(squareWidth)
+
+            for (let i = 0; i < squares.length; i++) {
+                squares[i].style.padding = squareWidth;
+            }
+
+        }
+        window.addEventListener('resize', setPadding)
         addListeners();
+        setPadding()
     </script>
 </body>
 
