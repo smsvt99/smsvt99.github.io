@@ -10,6 +10,9 @@
             background-size: 100%;
             font-family: Source Code Pro;
             color: rgb(43, 19, 19);
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
 
         h1 {
@@ -579,17 +582,16 @@
         function setPadding(){
             let pageWidth = document.documentElement.clientWidth;
             let squareWidth = pageWidth / 64 + 'px'
-            console.log(pageWidth)
-            console.log(squareWidth)
-
             for (let i = 0; i < squares.length; i++) {
                 squares[i].style.padding = squareWidth;
             }
 
         }
         window.addEventListener('resize', setPadding)
-        addListeners();
         setPadding()
+        
+        addListeners();
+
     </script>
 </body>
 
