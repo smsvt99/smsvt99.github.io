@@ -135,8 +135,8 @@
         </a>
         <div class="container">
             <a class="button" onclick="fade('newBio.html')" href="#">Bio</a>
-            <a class="button" onclick="fade()" href="#">Projects</a>
-            <a class="button" onclick="fade()" href="#">Contact</a>
+            <a class="button" onclick="fade('projects.html')" href="#">Projects</a>
+            <a class="button" onclick="fade('contact.html')" href="#">Contact</a>
         </div>
         
         <table class="tg">
@@ -248,10 +248,10 @@
         function assignColor(num, i) {
             let randomNumber = Math.random()
             if (randomNumber > num) {
-                squares[i].color = 'white';
+                // squares[i].color = 'white';
                 squares[i].style.opacity = 0;
             } else {
-                squares[i].color = 'brown';
+                // squares[i].color = 'brown';
                 randomColor(i);
             }
         }
