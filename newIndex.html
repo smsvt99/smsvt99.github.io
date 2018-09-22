@@ -23,16 +23,17 @@
             border-radius: 5px;
             border-left-width: 25px;
             border-right-width: 25px;
-            padding-top: 3px;
-            padding-bottom: 12px;
+            padding-top: 1%;
+            padding-bottom: 1%;
             text-align: center;
             margin: 2%;
         }
 
         .button {
-            float: left;
+            /* float: left; */
             color: rgb(43, 19, 19);
-            width: 15%;
+            width: 17%;
+            height: 5%;
             text-align: center;
             padding: 14px 16px;
             display: block;
@@ -43,12 +44,13 @@
             border-radius: 5px;
             border-left-width: 10px;
             border-right-width: 10px;
-            padding-top: 3px;
-            padding-bottom: 12px;
+            padding-top: 1%;
+            padding-bottom: 1%;
             margin: 2%;
             margin-left: 5%;
             margin-top: 0;
             text-decoration: none;
+            z-index: 2;
         }
 
         .container {
@@ -56,6 +58,9 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+            position: relative;
+            top: 15%;
+            /* transform: translateY(-40%); */
         }
 
         .button:hover {
@@ -87,15 +92,15 @@
         .tg {
             border-collapse: collapse;
             border-spacing: 0;
-            margin-top: 5%;
+            /* margin-top: 5%; */
             cursor: pointer;
             position: absolute;
-            bottom: 2%;
+            bottom: 0%;
             width: 100%;
         }
 
         .tg td {
-            padding: 20px;
+            /* padding: 20px; */
             /* height: 3%;
             width: 3%; */
             /* border-style: solid; */
@@ -118,365 +123,35 @@
         .tg-0lax {
             background-color: rgb(43, 19, 19);
         }
-        #animateButton {
-            width: 25%;
-        }
+
     </style>
 </head>
 
 <body>
-    <div id="overlay"></div>
-    <a onclick="fade('newIndex.html')" href="#">
-        <h1>Sean Michael Stone
-        </h1>
-    </a>
-    <div class="container">
-        <a class="button" onclick="fade('newBio.html')" href="#">Bio</a>
-        <a class="button" onclick="fade()" href="#">Projects</a>
-        <a class="button" onclick="fade()" href="#">Contact</a>
-    </div>
-
-    <div class="container">
+    <div id="overlay"></div>  
+        <a onclick="fade('newIndex.html')" href="#" id="name">
+            <h1>Sean Michael Stone
+            </h1>
+        </a>
+        <div class="container">
+            <a class="button" onclick="fade('newBio.html')" href="#">Bio</a>
+            <a class="button" onclick="fade()" href="#">Projects</a>
+            <a class="button" onclick="fade()" href="#">Contact</a>
+        </div>
+        
         <table class="tg">
-            <tr>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <!-- <th class="tg-0lax"></th> -->
-                <!-- <th class="tg-0lax"></th> -->
-                <!-- <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th> -->
-                <!-- <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax"></th> -->
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-            </tr>
-            <tr>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-            </tr>
+            <tr id="row1"></tr>
+            <tr id="row2"></tr>
+            <tr id="row3"></tr>
+            <tr id="row4"></tr>
+            <tr id="row5"></tr>
+            <tr id="row6"></tr>
+            <tr id="row7"></tr>
+            <tr id="row8"></tr>
         </table>
-    </div>
-    <script>
+
+        <script>
+        
         //fadeout and change file
         let opacity = 0;
         function fade(filename) {
@@ -494,25 +169,49 @@
                 setTimeout(function () { fade(filename) }, 30)
             }
         }
+        
         //pixely toy
 
-        let squares = document.getElementsByClassName("tg-0lax");
         let counter = 1
         let animationing;
+
+        function generateCells(){
+            for (let i = 1; i <= 256; i++){
+                let cell =  document.createElement('td')
+                cell.setAttribute('class', 'tg-0lax')
+                if (i <= 32){
+                    document.getElementById('row1').appendChild(cell)
+                } else if (i <= 64){
+                    document.getElementById('row2').appendChild(cell)
+                } else if (i <= 96){
+                    document.getElementById('row3').appendChild(cell)
+                } else if (i <= 128){
+                    document.getElementById('row4').appendChild(cell)
+                } else if (i <= 160){
+                    document.getElementById('row5').appendChild(cell)
+                } else if (i <= 192){
+                    document.getElementById('row6').appendChild(cell)
+                } else if (i <= 224){
+                    document.getElementById('row7').appendChild(cell)
+                } else if (i <= 256){
+                    document.getElementById('row8').appendChild(cell)
+                }
+        }
+        }
         
-       
-        
-        function animateSquares(){
+        let squares = document.getElementsByClassName("tg-0lax");
+
+
+        function animateSquares() {
             loopAndSortSquares();
             animationing = setTimeout("animateSquares()", 1250);
         }
-        
-        function handleClick(){
+
+        function handleClick() {
             counter++
-            if (counter % 2 === 0){
+            if (counter % 2 === 0) {
                 animateSquares();
             } else {
-                console.log('ya elsed!');
                 clearTimeout(animationing);
             }
 
@@ -558,28 +257,28 @@
         }
         function randomColor(i) {
             let secondRandomNumber = Math.random();
-                squares[i].style.opacity = secondRandomNumber;
-                if (secondRandomNumber.toPrecision(3) === '0.111') {
-                    squares[i].style.backgroundColor = 'red';
-                } else if (secondRandomNumber.toPrecision(4) === '0.2222') {
-                    squares[i].style.backgroundColor = 'orange';
-                } else if (secondRandomNumber.toPrecision(3) === '0.333') {
-                    squares[i].style.backgroundColor = 'yellow';
-                } else if (secondRandomNumber.toPrecision(4) === '0.4444') {
-                    squares[i].style.backgroundColor = 'green';
-                } else if (secondRandomNumber.toPrecision(3) === '0.555') {
-                    squares[i].style.backgroundColor = 'blue';
-                } else if (secondRandomNumber.toPrecision(3) === '0.666') {
-                    squares[i].style.backgroundColor = 'indigo';
-                } else if (secondRandomNumber.toPrecision(3) === '0.777') {
-                    squares[i].style.backgroundColor = 'violet';
-                } else if (secondRandomNumber.toPrecision(3) === '0.888') {
-                    squares[i].style.backgroundColor = 'white';
-                } else if (secondRandomNumber.toPrecision(2) === '0.99') {
-                    squares[i].style.opacity = 0;
-                }
+            squares[i].style.opacity = secondRandomNumber;
+            if (secondRandomNumber.toPrecision(3) === '0.111') {
+                squares[i].style.backgroundColor = 'red';
+            } else if (secondRandomNumber.toPrecision(4) === '0.2222') {
+                squares[i].style.backgroundColor = 'orange';
+            } else if (secondRandomNumber.toPrecision(3) === '0.333') {
+                squares[i].style.backgroundColor = 'yellow';
+            } else if (secondRandomNumber.toPrecision(4) === '0.4444') {
+                squares[i].style.backgroundColor = 'green';
+            } else if (secondRandomNumber.toPrecision(3) === '0.555') {
+                squares[i].style.backgroundColor = 'blue';
+            } else if (secondRandomNumber.toPrecision(3) === '0.666') {
+                squares[i].style.backgroundColor = 'indigo';
+            } else if (secondRandomNumber.toPrecision(3) === '0.777') {
+                squares[i].style.backgroundColor = 'violet';
+            } else if (secondRandomNumber.toPrecision(3) === '0.888') {
+                squares[i].style.backgroundColor = 'white';
+            } else if (secondRandomNumber.toPrecision(2) === '0.99') {
+                squares[i].style.opacity = 0;
+            }
         }
-        function setPadding(){
+        function setPadding() {
             let pageWidth = document.documentElement.clientWidth;
             let squareWidth = pageWidth / 64 + 'px'
             for (let i = 0; i < squares.length; i++) {
@@ -587,9 +286,10 @@
             }
 
         }
+        generateCells()
         window.addEventListener('resize', setPadding)
         setPadding()
-        
+
         addListeners();
 
     </script>

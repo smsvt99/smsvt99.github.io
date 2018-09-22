@@ -162,14 +162,6 @@
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
             </tr>
             <tr>
                 <td class="tg-0lax"></td>
@@ -204,14 +196,6 @@
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
                 <td class="tg-0lax"></td>
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
-                <!-- <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td>
-                <td class="tg-0lax"></td> -->
             </tr>
         </table>
     </div>
@@ -236,13 +220,10 @@
         //pixely toy
         let squares = document.getElementsByClassName("tg-0lax");
 
-        function handleMouseover(){
-
-        }
 
         function addListeners() {
             for (let i = 0; i < squares.length; i++) {
-                squares[i].addEventListener('click', loopAndSortSquares);
+                squares[i].addEventListener('click', handleClick);
                 loopAndSortSquares();
             }
         }
@@ -284,6 +265,20 @@
                 } else if (secondRandomNumber.toPrecision(2) === '0.88') {
                     squares[i].style.backgroundColor = 'white';
                 }
+        }
+        let counter = 1
+        function handleClick() {
+            counter++
+            if (counter % 2 === 0) {
+                animateSquares();
+            } else {
+                clearTimeout(animationing);
+            }
+
+        }
+        function animateSquares() {
+            loopAndSortSquares();
+            animationing = setTimeout("animateSquares()", 1250);
         }
         addListeners();
     </script>
