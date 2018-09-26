@@ -30,7 +30,8 @@
             padding-bottom: 12px;
             text-align: center;
             margin: 2%;
-            background-color: #f3f3EE
+            /* background-color: #f3f3EE */
+            background-color: lightcoral;
         }
 
         .button {
@@ -43,7 +44,6 @@
             display: block;
             font-size: 25px;
             border-color: rgb(43, 19, 19);
-            ;
             border-width: 3px;
             border-style: solid;
             border-radius: 5px;
@@ -53,7 +53,8 @@
             margin: 2%;
             margin-top: 0;
             text-decoration: none;
-            background-color: #f3f3EE
+            /* background-color: #f3f3EE */
+            background-color: lightcoral;
         }
 
         .container {
@@ -66,7 +67,6 @@
 
         .button:hover {
             background: rgb(43, 19, 19);
-            ;
             color: #f3f3EE;
             border-color: rgb(43, 19, 19);
         }
@@ -147,7 +147,8 @@
             margin-left: 5%;
             margin-top: 0; */
             text-decoration: none;
-            background-color: #f3f3EE
+            /* background-color: #f3f3EE */
+            background-Color: lightCoral;
         }
         li {
             margin: 15px;
@@ -311,7 +312,7 @@
 
         function randomColor(i) {
             let secondRandomNumber = Math.random();
-            squares[i].style.opacity = secondRandomNumber;
+            squares[i].style.opacity = .9;
             if (secondRandomNumber.toPrecision(2) === '0.11') {
                 squares[i].style.backgroundColor = 'red';
             } else if (secondRandomNumber.toPrecision(2) === '0.22') {
@@ -328,6 +329,8 @@
                 squares[i].style.backgroundColor = 'violet';
             } else if (secondRandomNumber.toPrecision(2) === '0.88') {
                 squares[i].style.backgroundColor = 'white';
+            } else if (secondRandomNumber.toPrecision(2) === '0.99') {
+                squares[i].style.backgroundColor = 'black';
             }
         }
         let counter = 1

@@ -132,13 +132,17 @@
             background-color: lightcyan;
             border-radius: 5px;
         }
+       
+       .projectCard:hover {
+           background-color: cyan;
+       }
 
         h2 {
             font-family: Source Code Pro;
         }
 
         img {
-            height: 200px;
+            height: 300px;
             width: 300px;
             border: black 2px solid;
             border-radius: 5px;
@@ -149,6 +153,10 @@
             text-decoration: underline;
             margin-bottom: 5px;
             margin: 1px;
+        }
+        .description {
+            margin-left: 25px;
+            margin-right: 25px;
         }
     </style>
 </head>
@@ -170,8 +178,8 @@
                 <!-- <div class="projectCard"> -->
                     <!-- <div> -->
                     <h2>Green Up Dashboard</h2>
-                    <img src="synesius.jpg">
-                    <p>Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
+                    <img src="dashboard.png">
+                    <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
                         Up Vermont app and represents in a clean, visually interesting and navigable way.</p>
                     <hr>
                     <a class="githubLink" href="google.com">See github repo</a>
@@ -183,8 +191,8 @@
             <a href="google.com">
                 <!-- <div class="projectCard"> -->
                     <h2>Hide-n-Seek</h2>
-                    <img src="synesius.jpg">
-                    <p>Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
+                    <img src="hidenseek.png">
+                    <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
                         Up Vermont app and represents in a clean, visually interesting and navigable way.</p>
                     <hr>
                     <a class="githubLink" href="google.com">See github repo</a>
@@ -196,8 +204,8 @@
             <a href="google.com">
                 <!-- <div class="projectCard"> -->
                     <h2>Lorem Ipsum Chrome</h2>
-                    <img src="synesius.jpg">
-                    <p>Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
+                    <img src="loremIpsum.png">
+                    <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
                         Up Vermont app and represents in a clean, visually interesting and navigable way.</p>
                     <hr>
                     <a class="githubLink" href="google.com">See github repo</a>
@@ -211,8 +219,8 @@
         <a href="www.google.com">
             <!-- <div class="projectCard"> -->
                 <h2>FF7 Calculator</h2>
-                <img src="synesius.jpg">
-                <p>Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
+                <img src="synesius4.jpg">
+                <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
                     Up Vermont app and represents in a clean, visually interesting and navigable way.</p>
                 <hr>
                 <a class="githubLink" href="www.notgoogle.com">See github repo</a>
@@ -224,8 +232,8 @@
         <a href="google.com">
             <!-- <div class="projectCard"> -->
                 <h2>Brontoscopic Calendar</h2>
-                <img src="synesius.jpg">
-                <p>Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
+                <img src="brontoscope.png">
+                <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
                     Up Vermont app and represents in a clean, visually interesting and navigable way.</p>
                 <hr>
                 <a class="githubLink" href="google.com">See github repo</a>
@@ -237,8 +245,8 @@
         <a href="google.com">
             <!-- <div class="projectCard"> -->
                 <h2>Another Project</h2>
-                <img src="synesius.jpg">
-                <p>Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
+                <img src="synesius4.jpg">
+                <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
                     Up Vermont app and represents in a clean, visually interesting and navigable way.</p>
                 <hr>
                 <a class="githubLink" href="google.com">See github repo</a>
@@ -367,7 +375,7 @@
 
         function randomColor(i) {
             let secondRandomNumber = Math.random();
-            squares[i].style.opacity = secondRandomNumber;
+            squares[i].style.opacity = .9;
             if (secondRandomNumber.toPrecision(2) === '0.11') {
                 squares[i].style.backgroundColor = 'red';
             } else if (secondRandomNumber.toPrecision(2) === '0.22') {
@@ -384,6 +392,8 @@
                 squares[i].style.backgroundColor = 'violet';
             } else if (secondRandomNumber.toPrecision(2) === '0.88') {
                 squares[i].style.backgroundColor = 'white';
+            } else if (secondRandomNumber.toPrecision(2) === '0.99') {
+                squares[i].style.backgroundColor = 'black';
             }
         }
         let counter = 1
