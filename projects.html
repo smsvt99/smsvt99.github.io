@@ -2,18 +2,21 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <style>
         body {
-            background: url('green.jpg');
+            /* background: url('green.jpg');
             background-position: center;
-            background-size: 120%;
+            background-size: 120%; */
+            background: linear-gradient(lightgreen, green, rgb(43, 19, 19),rgb(43, 19, 19));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-family: Source Code Pro;
             color: rgb(43, 19, 19);
             margin: 0;
             padding: 0;
             height: 100%;
-            /* overflow: hidden; */
         }
 
         h1 {
@@ -29,20 +32,16 @@
             padding-bottom: 12px;
             text-align: center;
             margin: 2%;
-            /* background-color: #f3f3EE */
         }
 
         .button {
-            /* float: left; */
             color: rgb(43, 19, 19);
-            ;
             width: 15%;
             text-align: center;
             padding: 14px 16px;
             display: block;
             font-size: 25px;
             border-color: rgb(43, 19, 19);
-            ;
             border-width: 3px;
             border-style: solid;
             border-radius: 5px;
@@ -50,10 +49,8 @@
             border-right-width: 10px;
             padding-top: 3px;
             margin: 2%;
-            /* margin-left: 5%; */
             margin-top: 0;
             text-decoration: none;
-            /* background-color: #f3f3EE */
         }
 
         .container {
@@ -90,7 +87,6 @@
         h1:hover {
             color: #f3f3EE;
             background: rgb(43, 19, 19);
-            ;
             border-color: rgb(43, 19, 19);
 
         }
@@ -98,27 +94,17 @@
         .tg {
             border-collapse: collapse;
             border-spacing: 0;
-            /* margin-top: 5%; */
             cursor: pointer;
-            /* position: absolute;
-            bottom: 2%; */
         }
 
         .tg td {
             padding: 20px;
-            /* border-style: solid; */
-            /* border-width: 1px; */
             overflow: hidden;
-            /* border-color: white; */
         }
 
         .tg th {
             padding: 20px;
-            /* border-style: solid; */
-            /* border-width: 1px; */
             overflow: hidden;
-            /* word-break:normal; */
-            /* border-color: white; */
         }
 
         .projectCard {
@@ -129,13 +115,13 @@
             border-style: solid;
             margin-bottom: 6%;
             text-align: center;
-            background-color: lightcyan;
+            background-color: whitesmoke;
             border-radius: 5px;
         }
-       
-       .projectCard:hover {
-           background-color: cyan;
-       }
+
+        .projectCard:hover {
+            background-color: cyan;
+        }
 
         h2 {
             font-family: Source Code Pro;
@@ -154,10 +140,14 @@
             margin-bottom: 5px;
             margin: 1px;
         }
+
         .description {
             margin-left: 15px;
             margin-right: 15px;
-            text-align:left;
+            text-align: left;
+        }
+        .projectLink{
+            display:block;
         }
     </style>
 </head>
@@ -174,81 +164,61 @@
         <a class="button" onclick="fade('contact.html')" href="#">Contact</a>
     </div>
     <div class="container">
-        <div class="projectCard">
-            <a href="google.com">
- 
-                    <h2>Green Up Dashboard</h2>
-                    <img src="dashboard.png">
-                    <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
-                        Up Vermont app and represents in a clean, visually interesting and navigable way. 
-                        <br><br>Tech: ES6, HTML, CSS grid, Firebase DB, Firebase Hosting, Leaflet, ChartJS, OdometerJS  
-                    </p>
-                    <hr>
-                    <a class="githubLink" href="google.com">See github repo</a>
-                    <hr>
-            </a>
-        </div>
-        <div class="projectCard">
-            <a href="google.com">
-                    <h2>Hide-N-Seek</h2>
-                    <img src="hidenseek.png">
-                    <p class="description">A simple yet 'full stack' game of my own design with some creative javascript. Made for practice and fun. Art by Nintendo.
-                         <br><br><br>Tech: Javascript, HTML, CSS, Node.js, MongoDB, Mlab, Heroku  </p>
-                    <hr>
-                    <a class="githubLink" href="google.com">See github repo</a>
-                    <hr>
-            </a>
-        </div>
+            <div class="projectCard">
+                    <a class="projectLink" href="https://greenupvermont-de02b.firebaseapp.com/">
+                <h2>Green Up Dashboard</h2>
+                <img src="dashboard.png">
+                <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard
+                    uses the data from the Green
+                    Up Vermont app and represents in a clean, visually interesting and navigable way.
+                    <br><br>Tech: ES6, HTML, CSS grid, Firebase DB, Firebase Hosting, Leaflet, ChartJS, OdometerJS
+                </p>
+                <hr>
+                <a class="githubLink" href="https://github.com/smsvt99/greenupDashboard">See github repo</a>
+                <hr>
+                </a>
+    </div>
+
+    <div class="projectCard">
+        <a class="projectLink" href="https://tranquil-badlands-14071.herokuapp.com/">
+            <h2>Hide-N-Seek</h2>
+            <img src="hidenseek.png">
+            <p class="description">A simple yet 'full stack' game of my own design with some creative javascript. Made
+                for practice and fun. Art by Nintendo.
+                <br><br><br>Tech: Javascript, HTML, CSS, Node.js, MongoDB, Mlab, Heroku </p>
+            <hr>
+            <a class="githubLink" href="https://github.com/smsvt99/Hide-N-Seek">See github repo</a>
+            <hr>
+        </a>
+    </div>
 
     </div>
     <div class="container">
         <div class="projectCard">
-        <a href="www.google.com">
+            <a class="projectLink" href="https://smsvt99.github.io/STGMockup/">
                 <h2>STG Mockup</h2>
                 <img src="STG.png">
-                <p class="description">Mockup Boostrap page made for STG, who requested design help. To be (contingently) integrated into their existing site to replace the preexisting landing page.
+                <p class="description">Mockup Boostrap page made for STG, who requested design help. To be
+                    (contingently) integrated into their existing site to replace the preexisting landing page.
                     <br><br>Tech: HTML, CSS, BootStrap, Jquery</p>
                 <hr>
-                <a class="githubLink" href="www.notgoogle.com">See github repo</a>
+                <a class="githubLink" href='https://github.com/smsvt99/STGMockup'>See github repo</a>
                 <hr>
-        </a>
+            </a>
         </div>
         <div class="projectCard">
-                <a href="google.com">
-                        <h2>Lorem Ipsum Chrome</h2>
-                        <img src="loremIpsum.png">
-                        <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
-                            Up Vermont app and represents in a clean, visually interesting and navigable way.</p>
-                        <hr>
-                        <a class="githubLink" href="google.com">See github repo</a>
-                        <hr>
-                </a>
-            </div>
-    </div>
-
-    <div class="container">
-        <div class="projectCard">
-        <a href="google.com">
+            <a class="projectLink" href="google.com">
                 <h2>Brontoscopic Calendar</h2>
                 <img src="brontoscope.png">
-                <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
+                <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard
+                    uses the data from the Green
                     Up Vermont app and represents in a clean, visually interesting and navigable way.</p>
                 <hr>
-                <a class="githubLink" href="google.com">See github repo</a>
+                <a class="githubLink" href="https://github.com/smsvt99/Brontoscope">See github repo</a>
                 <hr>
-        </a>
+            </a>
         </div>
-        <div class="projectCard">
-        <a href="google.com">
-                <h2>Another Project</h2>
-                <img src="synesius4.jpg">
-                <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard uses the data from the Green
-                    Up Vermont app and represents in a clean, visually interesting and navigable way.</p>
-                <hr>
-                <a class="githubLink" href="google.com">See github repo</a>
-                <hr>
-        </a>
-        </div>
+    </div>
     </div>
     <table class="tg">
         <tr>
