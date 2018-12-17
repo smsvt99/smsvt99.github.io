@@ -1,78 +1,298 @@
-<!DOCTYPE HTML>
-<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <html>
-<head>
-<style>
-    #whitespace{
-    width: 250px;
-    margin-bottom: 5px;
-    height: 100px
-    }
-    .red-text {
-        color:rgb(43, 19, 19);
-        font-weight: normal;
-    }
-    .box{
-	width:100px;
-	height:100px;
-}
-    body{
-    font-family: Source Code Pro;
-    }
-    h1{
-        font-size: 57px;
-        border-color:rgb(43, 19, 19) !important;
-        border-width: 5px;
-        border-style: solid;
-        border-radius: 5px;
-        border-left-width:25px;
-        border-right-width:25px;
-        padding-top: 3px;
-        padding-bottom: 12px
 
-    }
-    p{
-        font-size: 20px
-    }
-    
-    .topnav a {
-        float:left;
-        color:black;
-        width: 15%;
-        text-align: center;
-        padding:14px 16px;
-        display: block;
-        font-size: 25px;
-        border-color:rgb(43, 19, 19) !important;
-        border-width: 3px;
-        border-style: solid;
-        border-radius: 5px;
-        border-left-width: 10px;
-        border-right-width:10px;
-        padding-top: 3px;
-        padding-bottom: 12px;
-        margin: 25px
-    }
-    .topnav {
-        margin: 0 auto;
-    }
-    .topnav a:hover{
-        color: white;
-        background: rgb(43, 19, 19);
-    }
-</style>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: url('./images/background.jpg') no-repeat;
+            background-position: center;
+            background-size: 100%;
+            font-family: Source Code Pro;
+            color: rgb(43, 19, 19);
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 57px;
+            border-color: rgb(43, 19, 19);
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 5px;
+            border-left-width: 25px;
+            border-right-width: 25px;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            text-align: center;
+            margin: 2%;
+        }
+
+        .button {
+            /* float: left; */
+            color: rgb(43, 19, 19);
+            width: 17%;
+            height: 5%;
+            text-align: center;
+            padding: 14px 16px;
+            display: block;
+            font-size: 25px;
+            border-color: rgb(43, 19, 19);
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 5px;
+            border-left-width: 10px;
+            border-right-width: 10px;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            margin: 2%;
+            margin-left: 5%;
+            margin-top: 0;
+            text-decoration: none;
+            z-index: 2;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            top: 15%;
+            /* transform: translateY(-40%); */
+        }
+
+        .button:hover {
+            color: white;
+            background: rgb(43, 19, 19);
+        }
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(43, 19, 19);
+        }
+
+        h1:hover {      
+            color: white;
+            background: rgb(43, 19, 19);
+        }
+
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            /* margin-top: 5%; */
+            cursor: pointer;
+            position: absolute;
+            bottom: 0%;
+            width: 100%;
+        }
+
+        .tg td {
+            /* padding: 20px; */
+            /* height: 3%;
+            width: 3%; */
+            /* border-style: solid; */
+            /* border-width: 1px; */
+            overflow: hidden;
+            /* border-color: white; */
+        }
+
+        .tg th {
+            /* padding: 20px */
+            /* height: 3%;
+            width: 3%; */
+            /* border-style: solid; */
+            /* border-width: 1px; */
+            overflow: hidden;
+            /* word-break:normal; */
+            /* border-color: white; */
+        }
+
+        .tg-0lax {
+            background-color: rgb(43, 19, 19);
+        }
+
+    </style>
 </head>
-<body background="background.jpg">
-    <h1 class="red-text" align="center">Sean  Michael Stone</h1>
-    
-    <p align="center"><strong>/// GITHUB:</strong> smsvt99 /// <strong>PHONE:</strong> (802)324-6790 /// <strong>EMAIL:</strong> smsvt99@gmail.com /// </p>
-<div id="whitespace"></div>
-    <div class="topnav">
-        <a href="bio.html">Bio</a>
-        <a href="projects.html">Projects</a>
-        <a href="commentaries.html">Commentaries</a>
-        <div class="buttondivider"> </div>
-        <a href="Contact.html">Contact</a>
-    </div>
+
+<body>
+    <div id="overlay"></div>  
+        <a onclick="fade('index.html')" href="#" id="name">
+            <h1>Sean Michael Stone
+            </h1>
+        </a>
+        <div class="container">
+            <a class="button" onclick="fade('newBio.html')" href="#">Bio</a>
+            <a class="button" onclick="fade('projects.html')" href="#">Projects</a>
+            <a class="button" onclick="fade('contact.html')" href="#">Contact</a>
+        </div>
+        
+        <table class="tg">
+            <tr id="row1"></tr>
+            <tr id="row2"></tr>
+            <tr id="row3"></tr>
+            <tr id="row4"></tr>
+            <tr id="row5"></tr>
+            <tr id="row6"></tr>
+            <tr id="row7"></tr>
+            <tr id="row8"></tr>
+        </table>
+
+        <script>
+        
+        //fadeout and change file
+        let opacity = 0;
+        function fade(filename) {
+            console.log(filename)
+            document.getElementById('overlay').style.zIndex = 1;
+            document.getElementById('overlay').style.opacity = opacity;
+            changeOpacity(filename);
+        }
+        function changeOpacity(filename) {
+            console.log(filename)
+            if (opacity > 1) {
+                window.location.href = filename
+            } else {
+                opacity = opacity + .1
+                setTimeout(function () { fade(filename) }, 30)
+            }
+        }
+        
+        //pixely toy
+
+        let counter = 1
+        let animationing;
+
+        function generateCells(){
+            for (let i = 1; i <= 256; i++){
+                let cell =  document.createElement('td')
+                cell.setAttribute('class', 'tg-0lax')
+                if (i <= 32){
+                    document.getElementById('row1').appendChild(cell)
+                } else if (i <= 64){
+                    document.getElementById('row2').appendChild(cell)
+                } else if (i <= 96){
+                    document.getElementById('row3').appendChild(cell)
+                } else if (i <= 128){
+                    document.getElementById('row4').appendChild(cell)
+                } else if (i <= 160){
+                    document.getElementById('row5').appendChild(cell)
+                } else if (i <= 192){
+                    document.getElementById('row6').appendChild(cell)
+                } else if (i <= 224){
+                    document.getElementById('row7').appendChild(cell)
+                } else if (i <= 256){
+                    document.getElementById('row8').appendChild(cell)
+                }
+        }
+        }
+        
+        let squares = document.getElementsByClassName("tg-0lax");
+
+
+        function animateSquares() {
+            loopAndSortSquares();
+            animationing = setTimeout("animateSquares()", 1250);
+        }
+
+        function handleClick() {
+            counter++
+            if (counter % 2 === 0) {
+                animateSquares();
+            } else {
+                clearTimeout(animationing);
+            }
+
+        }
+
+        function addListeners() {
+            for (let i = 0; i < squares.length; i++) {
+                squares[i].addEventListener('click', handleClick);
+                loopAndSortSquares();
+            }
+        }
+
+        function loopAndSortSquares() {
+            for (let i = 0; i < squares.length; i++) {
+                if (i < 32) {
+                    assignColor(.1, i)
+                } else if (i < 64) {
+                    assignColor(.2, i)
+                } else if (i < 96) {
+                    assignColor(.3, i)
+                } else if (i < 128) {
+                    assignColor(.4, i)
+                } else if (i < 160) {
+                    assignColor(.5, i)
+                } else if (i < 192) {
+                    assignColor(.6, i)
+                } else if (i < 224) {
+                    assignColor(.7, i)
+                } else if (i < 256) {
+                    assignColor(.8, i)
+                }
+            }
+        }
+        function assignColor(num, i) {
+            let randomNumber = Math.random()
+            if (randomNumber > num) {
+                // squares[i].color = 'white';
+                squares[i].style.opacity = 0;
+            } else {
+                // squares[i].color = 'brown';
+                randomColor(i);
+            }
+        }
+        function randomColor(i) {
+            let secondRandomNumber = Math.random();
+            squares[i].style.opacity = secondRandomNumber;
+            if (secondRandomNumber.toPrecision(3) === '0.111') {
+                squares[i].style.backgroundColor = 'red';
+            } else if (secondRandomNumber.toPrecision(4) === '0.2222') {
+                squares[i].style.backgroundColor = 'orange';
+            } else if (secondRandomNumber.toPrecision(3) === '0.333') {
+                squares[i].style.backgroundColor = 'yellow';
+            } else if (secondRandomNumber.toPrecision(4) === '0.4444') {
+                squares[i].style.backgroundColor = 'green';
+            } else if (secondRandomNumber.toPrecision(3) === '0.555') {
+                squares[i].style.backgroundColor = 'blue';
+            } else if (secondRandomNumber.toPrecision(3) === '0.666') {
+                squares[i].style.backgroundColor = 'indigo';
+            } else if (secondRandomNumber.toPrecision(3) === '0.777') {
+                squares[i].style.backgroundColor = 'violet';
+            } else if (secondRandomNumber.toPrecision(3) === '0.888') {
+                squares[i].style.backgroundColor = 'white';
+            } else if (secondRandomNumber.toPrecision(2) === '0.99') {
+                squares[i].style.opacity = 0;
+            }
+        }
+        function setPadding() {
+            let pageWidth = document.documentElement.clientWidth;
+            let squareWidth = pageWidth / 64 + 'px'
+            for (let i = 0; i < squares.length; i++) {
+                squares[i].style.padding = squareWidth;
+            }
+
+        }
+        generateCells()
+        window.addEventListener('resize', setPadding)
+        setPadding()
+
+        addListeners();
+
+    </script>
 </body>
+
 </html>
