@@ -1,172 +1,17 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-    <style>
-        body {
-            /* background: url('green.jpg');
-            background-position: center;
-            background-size: 120%; */
-            background: linear-gradient(lightgreen, green, rgb(43, 19, 19),rgb(43, 19, 19));
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: Source Code Pro;
-            color: rgb(43, 19, 19);
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-
-        h1 {
-            font-size: 57px;
-            border-color: rgb(43, 19, 19);
-            ;
-            border-width: 5px;
-            border-style: solid;
-            border-radius: 5px;
-            border-left-width: 25px;
-            border-right-width: 25px;
-            padding-top: 3px;
-            padding-bottom: 12px;
-            text-align: center;
-            margin: 2%;
-        }
-
-        .button {
-            color: rgb(43, 19, 19);
-            width: 15%;
-            text-align: center;
-            padding: 14px 16px;
-            display: block;
-            font-size: 25px;
-            border-color: rgb(43, 19, 19);
-            border-width: 3px;
-            border-style: solid;
-            border-radius: 5px;
-            border-left-width: 10px;
-            border-right-width: 10px;
-            padding-top: 3px;
-            margin: 2%;
-            margin-top: 0;
-            text-decoration: none;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .button:hover {
-            background: rgb(43, 19, 19);
-            ;
-            color: #f3f3EE;
-            border-color: rgb(43, 19, 19);
-        }
-
-        #overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: black;
-            opacity: 0;
-            z-index: -1;
-        }
-
-        a {
-            text-decoration: none;
-            color: rgb(43, 19, 19);
-        }
-
-        h1:hover {
-            color: #f3f3EE;
-            background: rgb(43, 19, 19);
-            border-color: rgb(43, 19, 19);
-
-        }
-
-        .tg {
-            border-collapse: collapse;
-            border-spacing: 0;
-            cursor: pointer;
-        }
-
-        .tg td {
-            padding: 20px;
-            overflow: hidden;
-        }
-
-        .tg th {
-            padding: 20px;
-            overflow: hidden;
-        }
-
-        .projectCard {
-            width: 500px;
-            height: auto;
-            border-color: black;
-            border-width: 2px;
-            border-style: solid;
-            margin-bottom: 6%;
-            text-align: center;
-            background-color: whitesmoke;
-            border-radius: 5px;
-        }
-
-        .projectCard:hover {
-            background-color: cyan;
-        }
-
-        h2 {
-            font-family: Source Code Pro;
-        }
-
-        img {
-            height: 300px;
-            width: 300px;
-            border: black 2px solid;
-            border-radius: 5px;
-        }
-
-        .githubLink {
-            color: blue;
-            text-decoration: underline;
-            margin-bottom: 5px;
-            margin: 1px;
-        }
-
-        .description {
-            margin-left: 15px;
-            margin-right: 15px;
-            text-align: left;
-        }
-        .projectLink{
-            display:block;
-        }
-    </style>
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <div id="overlay"></div>
-    <a onclick="fade('index.html')" href="#">
-        <h1>Sean Michael Stone
-        </h1>
-    </a>
+    <h1>Sean Michael Stone</h1>
+
+    <!-- GREEN UP -->
     <div class="container">
-        <a class="button" onclick="fade('newBio.html')" href="#">Bio</a>
-        <a class="button" onclick="fade('projects.html')" href="#">Projects</a>
-        <a class="button" onclick="fade('contact.html')" href="#">Contact</a>
-    </div>
-<!-- GREEN UP -->
-    <div class="container">
-            <div class="projectCard">
-                    <a class="projectLink" href="https://greenupvermont-de02b.firebaseapp.com/">
+        <div class="projectCard">
+            <a class="projectLink" href="https://greenupvermont-de02b.firebaseapp.com/">
                 <h2>Green Up Dashboard</h2>
                 <img src="./images/dashboard.png">
                 <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard
@@ -174,236 +19,117 @@
                     Up Vermont app and represents in a clean, visually interesting and navigable way.
                     <br><br>Tech: ES6, HTML, CSS grid, Firebase DB, Firebase Hosting, Leaflet, ChartJS, OdometerJS
                 </p>
-                <hr>
                 <a class="githubLink" href="https://github.com/smsvt99/greenupDashboard">See github repo</a>
-                <hr>
-                </a>
-    </div>
-<!-- HIDE AND SEEK -->
-    <div class="projectCard">
-        <a class="projectLink" href="https://tranquil-badlands-14071.herokuapp.com/">
-            <h2>Hide-N-Seek</h2>
-            <img src="./images/hidenseek.png">
-            <p class="description">A simple, yet 'full stack' game of my own design with some creative javascript. Made
-                for practice and fun. Art by Nintendo.
-                <br><br><br>Tech: Javascript, HTML, CSS, Node.js, MongoDB, Mlab, Heroku </p>
-            <hr>
-            <a class="githubLink" href="https://github.com/smsvt99/Hide-N-Seek">See github repo</a>
-            <hr>
-        </a>
-    </div>
+            </a>
+        </div>
+        <!-- CMS -->
+        <div class="projectCard">
+            <a class="projectLink" href="http://www.seanstone.co/cms/">
+                <h2>Hello World CMS/ Blog</h2>
+                <img src="./images/cms.png">
+                <p class="description">Hello World, a blog about itself: a custom CMS of my own design and blog about its development.
+                        <br><br><br><br><br><br><br><br><br>Tech: PHP, MySQL, cPanel
+                </p>
+                <a class="githubLink" href="https://github.com/smsvt99/greenupDashboard">See github repo</a>
+            </a>
+        </div>
+        <div class="projectCard">
+            <a class="projectLink" href="http://tetris.seanstone.co">
+                <h2>React TETRIS</h2>
+                <img src="./images/tetris.png">
+                <p class="description">My own recreation of the classic. Make sure to check out the scoreboard!
+                    <br><br>Tech: React, create-react-app</p>
+                <br><br><br><br><br><br><br>
+                <a class="githubLink" href='https://github.com/smsvt99/reactTetris'>See github repo</a>
+            </a>
+        </div>
 
     </div>
-<!-- STG -->
+    <!-- STG -->
     <div class="container">
         <div class="projectCard">
             <a class="projectLink" href="https://publishers.document-center.com/stgnet">
-                <h2>STG Pages and Templates</h2>
+                <h2>STG Pages</h2>
                 <img src="./images/STG.png">
                 <p class="description">
-                    Redesigns of a number of pages and templates for a locally based web app. Some pages already integrated, others still forthcomming.<br/>
+                    Redesigns of a number of pages and templates for a locally based web app. Some pages already
+                    integrated, others still forthcomming.<br />
                     <br><br>Tech: HTML, CSS, BootStrap, Jquery, Filezilla</p>
-                <hr>
+                <br><br><br><br>
                 <a class="githubLink" href='https://github.com/smsvt99/STGMockup'>See github repo</a>
-                <hr>
             </a>
         </div>
-<!-- BRONTOSCOPE -->
+        <!-- Hide-n-seek -->
         <div class="projectCard">
-            <a class="projectLink" href="https://glacial-sierra-69558.herokuapp.com/">
-                <h2>Brontoscopic Calendar</h2>
-                <img src="./images/brontoscope.png">
-                <p class="description">My first project! A tool for interacting with the ancient Etruscan document as reported in the writing of Johannes Lydus. A marriage of tech and history.<br><br>Tech: AJAX, Geolocation, Dates </p>
-                <hr>
-                <a class="githubLink" href="https://github.com/smsvt99/Brontoscope">See github repo</a>
-                <hr>
+            <a class="projectLink" href="https://tranquil-badlands-14071.herokuapp.com/">
+                <h2>Hide-N-Seek</h2>
+                <img src="./images/hidenseek.png">
+                <p class="description">A simple, yet 'full stack' game of my own design with some creative javascript.
+                    Made
+                    for practice and fun. Art by Nintendo.
+                    <br><br><br>Tech: Javascript, HTML, CSS, Node.js, MongoDB, Mlab, Heroku </p>
+                <br><br><br>
+                <a class="githubLink" href="https://github.com/smsvt99/Hide-N-Seek">See github repo</a>
             </a>
         </div>
-    </div>
-<!-- TETRIS -->
-    <div class="container">
-        <div class="projectCard">
-            <a class="projectLink" href="http://yummy-chair.surge.sh/">
-                <h2>React TETRIS</h2>
-                <img src="./images/tetris.png">
-                <p class="description">My own recreation of the classic.
-                    <br><br><br>Tech: React, create-react-app, Surge</p>
-                <hr>
-                <a class="githubLink" href='https://github.com/smsvt99/reactTetris'>See github repo</a>
-                <hr>
-            </a>
-        </div>
-<!-- YOUTUBE RADIO -->
+
+        <!-- YOUTUBE RADIO -->
         <div class="projectCard">
             <a class="projectLink" href="https://smsvt99.github.io/youtubeRadio/">
                 <h2>YouTube Radio Player</h2>
                 <img src="./images/youtuberadio.png">
-                <p class="description">A stylish player and organizer for music on youtube. No adds or comment sections!
+                <p class="description">A stylish player and organizer for music on youtube. No ads or comment sections!
                     <br><br>Tech: YouTube player API, Cookies, animate.css</p>
-                <hr>
+                <br><br><br><br><br><br>
                 <a class="githubLink" href="https://github.com/smsvt99/Brontoscope">See github repo</a>
-                <hr>
             </a>
         </div>
     </div>
+    <div class="container">
+        <div class="projectCard">
+            <a class="projectLink" href="https://glacial-sierra-69558.herokuapp.com/">
+                <h2>Brontoscopic Calendar</h2>
+                <img src="./images/brontoscope.png">
+                <p class="description">My first project! A tool for interacting with the ancient Etruscan document as
+                    reported in the writing of Johannes Lydus. A marriage of tech and history.<br><br>Tech: AJAX,
+                    Geolocation, Dates </p>
+                <a class="githubLink" href="https://github.com/smsvt99/Brontoscope">See github repo</a>
+            </a>
+        </div>
+        <div class="info">
+                <img class="infoImg" src="./images/bcapicpng.png">
+                <p id="infoText">After earning his MA in Classics from UVM in 2017, Sean changed his focus to the
+                    exciting field
+                    of
+                    Web Development. He attended and graduated from the first ever cohort of the Burlington Code
+                    Academy
+                    in the summer of 2018, and now spends his free time studying and working on projects to further
+                    his
+                    technical aptitude. He loves learning, solving problems, and being creative.</p>
+                    <br><br>
+                    <ul> 
+                            <li>Call or Text: 
+                                <a href="tel:8023246790">(802) 324-6790</a>
+                            </li>
+                
+                            <li>Email:
+                                <a href="mail-to:smsvt99@gmail.com">smsvt99@gmail.com</a>
+                            </li>
+                        
+                            <li>Linked in: 
+                                <a href="https://www.linkedin.com/in/sean-m-stone/">sean-m-stone</a>
+                            </li>
+                     
+                            <li>Github: 
+                                <a href="https://github.com/smsvt99">smsvt99</a>
+                            </li>
+                
+                        </ul>
+
+        </div>
     </div>
-    <table class="tg">
-        <tr>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-        </tr>
-        <tr>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-            <td class="tg-0lax"></td>
-        </tr>
-    </table>
-    <script>
-        //fadeout and change file
-        let opacity = 0;
-        function fade(filename) {
-            console.log(filename)
-            document.getElementById('overlay').style.zIndex = 1;
-            document.getElementById('overlay').style.opacity = opacity;
-            changeOpacity(filename);
-        }
-        function changeOpacity(filename) {
-            console.log(filename)
-            if (opacity > 1) {
-                window.location.href = filename
-            } else {
-                opacity = opacity + .1
-                setTimeout(function () {
-                    fade(filename)
-                }, 30)
-            }
-        }
-        //pixely toy
-        let squares = document.getElementsByClassName("tg-0lax");
+    </div>
 
-
-        function addListeners() {
-            for (let i = 0; i < squares.length; i++) {
-                squares[i].addEventListener('click', handleClick);
-                loopAndSortSquares();
-            }
-        }
-
-        function loopAndSortSquares() {
-            for (let i = 0; i < squares.length; i++) {
-                assignColor(.3, i)
-            }
-        }
-
-        function assignColor(num, i) {
-            let randomNumber = Math.random()
-            if (randomNumber > num) {
-                // squares[i].color = 'white';
-                squares[i].style.opacity = 0;
-            } else {
-                // squares[i].color = 'brown';
-                randomColor(i);
-            }
-        }
-
-        function randomColor(i) {
-            let secondRandomNumber = Math.random();
-            squares[i].style.opacity = .9;
-            if (secondRandomNumber.toPrecision(2) === '0.11') {
-                squares[i].style.backgroundColor = 'red';
-            } else if (secondRandomNumber.toPrecision(2) === '0.22') {
-                squares[i].style.backgroundColor = 'orange';
-            } else if (secondRandomNumber.toPrecision(2) === '0.33') {
-                squares[i].style.backgroundColor = 'yellow';
-            } else if (secondRandomNumber.toPrecision(2) === '0.44') {
-                squares[i].style.backgroundColor = 'green';
-            } else if (secondRandomNumber.toPrecision(2) === '0.55') {
-                squares[i].style.backgroundColor = 'blue';
-            } else if (secondRandomNumber.toPrecision(2) === '0.66') {
-                squares[i].style.backgroundColor = 'indigo';
-            } else if (secondRandomNumber.toPrecision(2) === '0.77') {
-                squares[i].style.backgroundColor = 'violet';
-            } else if (secondRandomNumber.toPrecision(2) === '0.88') {
-                squares[i].style.backgroundColor = 'white';
-            } else if (secondRandomNumber.toPrecision(2) === '0.99') {
-                squares[i].style.backgroundColor = 'black';
-            }
-        }
-        let counter = 1
-        function handleClick() {
-            counter++
-            if (counter % 2 === 0) {
-                animateSquares();
-            } else {
-                clearTimeout(animationing);
-            }
-
-        }
-        function animateSquares() {
-            loopAndSortSquares();
-            animationing = setTimeout("animateSquares()", 1250);
-        }
-        addListeners();
-    </script>
 </body>
 
 </html>
