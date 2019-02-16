@@ -3,6 +3,7 @@
 <head>
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 <body>
@@ -10,10 +11,10 @@
 
     <!-- GREEN UP -->
     <div class="container">
-        <div class="projectCard">
+        <div id="greenUpDiv" class="projectCard">
             <a class="projectLink" href="https://greenupvermont-de02b.firebaseapp.com/">
                 <h2>Green Up Dashboard</h2>
-                <img src="./images/dashboard.png">
+                <img id="greenUpImg" class='fader'>
                 <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard
                     uses the data from the Green
                     Up Vermont app and represents in a clean, visually interesting and navigable way.
@@ -23,10 +24,10 @@
             </a>
         </div>
         <!-- CMS -->
-        <div class="projectCard">
+        <div id="cmsDiv" class="projectCard">
             <a class="projectLink" href="http://www.seanstone.co/cms/">
                 <h2>Hello World CMS/ Blog</h2>
-                <img src="./images/cms.png">
+                <img id="cmsImg" class="fader">
                 <p class="description">Hello World, a blog about itself: a custom CMS of my own design and blog about its development.
                         <br><br><br><br><br><br>Tech: PHP, MySQL, cPanel
                         <br><br><br><br>
@@ -35,10 +36,10 @@
             </a>
         </div>
         <!-- //tetris -->
-        <div class="projectCard">
+        <div class="projectCard" id="tetrisDiv">
             <a class="projectLink" href="http://tetris.seanstone.co">
                 <h2>React TETRIS</h2>
-                <img src="./images/tetris.png">
+                <img id="tetrisImg" class="fader">
                 <p class="description">My own recreation of the classic. Make sure to check out the scoreboard!
                         <br><br><br><br><br><br><br>Tech: React, create-react-app</p>
                 <br><br>
@@ -49,10 +50,10 @@
     </div>
     <!-- STG -->
     <div class="container">
-        <div class="projectCard">
+        <div class="projectCard" id="stgDiv">
             <a class="projectLink" href="https://publishers.document-center.com/stgnet">
                 <h2>STG Pages</h2>
-                <img src="./images/STG.png">
+                <img id="stgImg" class="fader">
                 <p class="description">
                     Redesigns of a number of pages and templates for a locally based web app. Some pages already
                     integrated, others still forthcomming.<br />
@@ -62,10 +63,10 @@
             </a>
         </div>
         <!-- Hide-n-seek -->
-        <div class="projectCard">
+        <div class="projectCard" id="hidenSeekDiv">
             <a class="projectLink" href="https://tranquil-badlands-14071.herokuapp.com/">
                 <h2>Hide-N-Seek</h2>
-                <img src="./images/hidenseek.png">
+                <img id="hidenSeekImg" class="fader">
                 <p class="description">A simple, yet 'full stack' game of my own design with some creative javascript.
                     Made
                     for practice and fun. Art by Nintendo.
@@ -76,10 +77,10 @@
         </div>
 
         <!-- YOUTUBE RADIO -->
-        <div class="projectCard">
+        <div class="projectCard" id="radioDiv">
             <a class="projectLink" href="https://smsvt99.github.io/youtubeRadio/">
                 <h2>YouTube Radio Player</h2>
-                <img src="./images/youtuberadio.png">
+                <img id="radioImg" class="fader">
                 <p class="description">A stylish player and organizer for music on youtube. No ads or comment sections!
                         <br><br><br><br>Tech: YouTube player API, Cookies, animate.css</p>
                 <br><br><br><br>
@@ -88,10 +89,10 @@
         </div>
     </div>
     <div class="container">
-        <div class="projectCard">
+        <div class="projectCard" id="brontoscopeDiv">
             <a class="projectLink" href="https://glacial-sierra-69558.herokuapp.com/">
                 <h2>Brontoscopic Calendar</h2>
-                <img src="./images/brontoscope.png">
+                <img id="brontoscopeImg" class="fader">
                 <p class="description">My first project! A tool for interacting with the ancient Etruscan document as
                     reported in the writing of Johannes Lydus. A marriage of tech and history.<br><br>Tech: AJAX,
                     Geolocation, Dates </p>
@@ -131,7 +132,7 @@
         </div>
     </div>
     </div>
-
+    <script src='./script.js'></script>
 </body>
 
 </html>

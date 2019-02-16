@@ -99,6 +99,7 @@ img {
     width: 150px;
     border: black 2px solid;
     border-radius: 5px;
+    background-size: cover;
 }
 
 .githubLink {
@@ -149,4 +150,32 @@ table{
 }
 li{
     font-size: 20px;
+}
+.fader{
+    opacity: 1;
+    transition: opacity .2s;
+    -webkit-transition: opacity .2s;
+
+}
+#greenUpImg{
+    background-image: url("./images/freezegreenup.gif");
+    animation-play-state: paused;
+}
+#cmsImg{
+    background-image: url("./images/freezecms.gif");
+}
+#tetrisImg{
+    background-image: url("./images/freezetetris.gif");
+}
+#stgImg{
+    background-image: url("./images/freezestg.gif");
+}
+#hidenSeekImg{
+    background-image: url("./images/freezehidenseek.gif");
+}
+#radioImg{
+    background-image: url("./images/freezeradio.gif");
+}
+#brontoscopeImg{
+    background-image: url("./images/freezebrontoscope.gif");
 }
