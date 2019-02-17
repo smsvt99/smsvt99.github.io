@@ -9,13 +9,10 @@ body {
     margin: 0;
     padding: 0;
     height: auto;
-    /* border: 5px solid white; */
 } 
 
 h1 {
     font-size: 57px;
-    /* color: lightblue;
-    border-color: lightblue; */
     color: white;
     border-color: white;
     border-width: 5px;
@@ -27,24 +24,11 @@ h1 {
     padding-bottom: 12px;
     text-align: center;
     margin: 2%;
-}
+    margin-top: 300px;
 
-.button {
-    color: white;
-    width: 15%;
-    text-align: center;
-    padding: 14px 16px;
-    display: block;
-    font-size: 25px;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 5px;
-    border-left-width: 10px;
-    border-right-width: 10px;
-    padding-top: 3px;
-    margin: 2%;
-    margin-top: 0;
-    text-decoration: none;
+    -webkit-animation: neon1 4s ease-in-out infinite alternate;
+    -moz-animation: neon1 4s ease-in-out infinite alternate;
+    animation: neon1 4s ease-in-out infinite alternate;
 }
 
 .container {
@@ -53,6 +37,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 100px;
 }
 
 a{
@@ -65,13 +50,11 @@ a{
 
 .projectCard {
     width: 300px;
-    height: 560px;
+    /* height: 560px; */
     text-align: center;
     border: 3px solid white;
-    -webkit-transition: border-color .5s;
-    transition: border-color .5s;
-    -webkit-transition: background-color .5s; 
-    transition: background-color .5s;
+    -webkit-transition: border-color 1s, background-color .5s, box-shadow .5s, text-shadow .5s;
+    transition: border-color 1s, background-color .5s, box-shadow .5s, text-shadow .5s;
     background-color: rgba(0, 0, 0, .3);
     color: white;
     border-radius: 20px;
@@ -82,7 +65,10 @@ a{
 
 .projectCard:hover {
     background-color: rgba(0, 0, 0, 1);
-    border-color: lightblue;
+    border-color: powderblue;
+    box-shadow: 0 0 5px #FFF, 0 0 15px powderblue, 0 0 17px powderblue;
+    /* text-shadow: 0 0 2px powderblue; */
+    color: powderblue;
 }
 
 h2 {
@@ -94,12 +80,15 @@ p {
     color: white;
 }
 
-img {
+.img {
     height: 150px;
     width: 150px;
     border: black 2px solid;
     border-radius: 5px;
     background-size: cover;
+    -webkit-transition: border-color 1s, box-shadow .5s;
+    transition: border-color 1s, box-shadow .5s;
+    margin: auto;
 }
 
 .githubLink {
@@ -130,6 +119,11 @@ table{
     padding: 40px;
     font-weight: 300;
     border: 3px solid white;
+    
+    opacity: 0;
+    transform: translateX(500px);
+    transition: all .5s ease-in-out;
+
 }
 #infoText{
     color: white;
@@ -147,19 +141,19 @@ table{
     border-radius: 5px;
     float: left;
     margin-right: 20px;
+
 }
 li{
     font-size: 20px;
 }
-.fader{
+/* .fader{
     opacity: 1;
     transition: opacity .2s;
     -webkit-transition: opacity .2s;
 
-}
+} */
 #greenUpImg{
     background-image: url("./images/freezegreenup.gif");
-    animation-play-state: paused;
 }
 #cmsImg{
     background-image: url("./images/freezecms.gif");
@@ -179,3 +173,63 @@ li{
 #brontoscopeImg{
     background-image: url("./images/freezebrontoscope.gif");
 }
+
+/* .target-right{
+    opacity: 1;
+    transform: translateX(500px); */
+/* } */
+.target{
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+  
+  .target.fade-in{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .info.fade-in{
+    opacity: 1;
+    transform: translateX(0);
+  }
+/* 
+  .target-right.fade-in{
+    opacity: 1;
+    transform: translateX(0);
+  }
+   */
+
+
+  @-webkit-keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+      }
+      to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFF;
+      }
+    }
+
+  @-moz-keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+      }
+      to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFF;
+      }
+    }
+
+  }
+
+  @keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFF;
+    }
+  }

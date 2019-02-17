@@ -1,20 +1,20 @@
 <html>
 
 <head>
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-
 </head>
 
-<body>
-    <h1>Sean Michael Stone</h1>
+<body id="body">
+    <h1 id="title">Sean Michael Stone</h1>
 
     <!-- GREEN UP -->
-    <div class="container">
-        <div id="greenUpDiv" class="projectCard">
+    <div class="container" id="containerOne">
+
+        <div id="greenUpDiv" class="projectCard target">
             <a class="projectLink" href="https://greenupvermont-de02b.firebaseapp.com/">
                 <h2>Green Up Dashboard</h2>
-                <img id="greenUpImg" class='fader'>
+                <div id="greenUpImg" class='fader img'></div>
                 <p class="description">Built in conjunction with Code for BTV as a capstone project, this dashboard
                     uses the data from the Green
                     Up Vermont app and represents in a clean, visually interesting and navigable way.
@@ -24,10 +24,10 @@
             </a>
         </div>
         <!-- CMS -->
-        <div id="cmsDiv" class="projectCard">
+        <div id="cmsDiv" class="projectCard target">
             <a class="projectLink" href="http://www.seanstone.co/cms/">
                 <h2>Hello World CMS/ Blog</h2>
-                <img id="cmsImg" class="fader">
+                <div id="cmsImg" class="fader img"></div>
                 <p class="description">Hello World, a blog about itself: a custom CMS of my own design and blog about its development.
                         <br><br><br><br><br><br>Tech: PHP, MySQL, cPanel
                         <br><br><br><br>
@@ -35,11 +35,11 @@
                 <a class="githubLink" href="https://github.com/smsvt99/CMS-for-blog">See github repo</a>
             </a>
         </div>
-        <!-- //tetris -->
-        <div class="projectCard" id="tetrisDiv">
+         <!-- tetris -->
+        <div class="projectCard target" id="tetrisDiv">
             <a class="projectLink" href="http://tetris.seanstone.co">
                 <h2>React TETRIS</h2>
-                <img id="tetrisImg" class="fader">
+                <div id="tetrisImg" class="img fader"></div>
                 <p class="description">My own recreation of the classic. Make sure to check out the scoreboard!
                         <br><br><br><br><br><br><br>Tech: React, create-react-app</p>
                 <br><br>
@@ -50,10 +50,10 @@
     </div>
     <!-- STG -->
     <div class="container">
-        <div class="projectCard" id="stgDiv">
+        <div class="projectCard target" id="stgDiv">
             <a class="projectLink" href="https://publishers.document-center.com/stgnet">
                 <h2>STG Pages</h2>
-                <img id="stgImg" class="fader">
+                <div id="stgImg" class="img fader"></div>
                 <p class="description">
                     Redesigns of a number of pages and templates for a locally based web app. Some pages already
                     integrated, others still forthcomming.<br />
@@ -63,10 +63,10 @@
             </a>
         </div>
         <!-- Hide-n-seek -->
-        <div class="projectCard" id="hidenSeekDiv">
+        <div class="projectCard target" id="hidenSeekDiv">
             <a class="projectLink" href="https://tranquil-badlands-14071.herokuapp.com/">
                 <h2>Hide-N-Seek</h2>
-                <img id="hidenSeekImg" class="fader">
+                <div id="hidenSeekImg" class="img fader"></div>
                 <p class="description">A simple, yet 'full stack' game of my own design with some creative javascript.
                     Made
                     for practice and fun. Art by Nintendo.
@@ -77,10 +77,10 @@
         </div>
 
         <!-- YOUTUBE RADIO -->
-        <div class="projectCard" id="radioDiv">
+        <div class="projectCard target" id="radioDiv">
             <a class="projectLink" href="https://smsvt99.github.io/youtubeRadio/">
                 <h2>YouTube Radio Player</h2>
-                <img id="radioImg" class="fader">
+                <div id="radioImg" class="img fader"></div>
                 <p class="description">A stylish player and organizer for music on youtube. No ads or comment sections!
                         <br><br><br><br>Tech: YouTube player API, Cookies, animate.css</p>
                 <br><br><br><br>
@@ -89,24 +89,26 @@
         </div>
     </div>
     <div class="container">
-        <div class="projectCard" id="brontoscopeDiv">
+        <div class="projectCard target" id="brontoscopeDiv">
             <a class="projectLink" href="https://glacial-sierra-69558.herokuapp.com/">
                 <h2>Brontoscopic Calendar</h2>
-                <img id="brontoscopeImg" class="fader">
+                <div id="brontoscopeImg" class="img fader"></div>
                 <p class="description">My first project! A tool for interacting with the ancient Etruscan document as
                     reported in the writing of Johannes Lydus. A marriage of tech and history.<br><br>Tech: AJAX,
                     Geolocation, Dates </p>
+                    <br><br><br><br>
                 <a class="githubLink" href="https://github.com/smsvt99/Brontoscope">See github repo</a>
             </a>
         </div>
+
         <div class="info">
                 <img class="infoImg" src="./images/bcapicpng.png">
                 <p id="infoText">After earning his MA in Classics from UVM in 2017, Sean changed his focus to the
                     exciting field
                     of
-                    Web Development. He attended and graduated from the first ever cohort of the Burlington Code
+                    Web Development. He attended and graduated from the first ever cohort of Burlington Code
                     Academy
-                    in the summer of 2018, and now spends his free time studying and working on projects to further
+                    in the summer of 2018, and is now a freelance developer who spends his free time studying and working on projects to further
                     his
                     technical aptitude. He loves learning, solving problems, and being creative.</p>
                     <br><br>
@@ -132,7 +134,14 @@
         </div>
     </div>
     </div>
-    <script src='./script.js'></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js'></script>
+    
+  <script src='./script.js'></script>
+
 </body>
 
 </html>
