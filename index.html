@@ -3,6 +3,16 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+            var myimages=new Array()
+            function preloadimages(){
+                for (i=0;i<preloadimages.arguments.length;i++){
+                myimages[i]=new Image()
+                myimages[i].src=preloadimages.arguments[i]
+                }
+            }
+            preloadimages('./gifs/radio.gif', './gifs/brontoscope.gif', './gifs/stg.gif', './gifs/tetris.gif', './gifs/cms.gif', './gifs/greenup.gif', './gifs/hidenseek.gif')
+    </script>
 </head>
 
 <body id="body">

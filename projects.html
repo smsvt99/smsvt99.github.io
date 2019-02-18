@@ -3,6 +3,16 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        var myimages = new Array()
+        function preloadimages() {
+            for (i = 0; i < preloadimages.arguments.length; i++) {
+                myimages[i] = new Image()
+                myimages[i].src = preloadimages.arguments[i]
+            }
+        }
+        preloadimages('./gifs/radio.gif', './gifs/brontoscope.gif', './gifs/stg.gif', './gifs/tetris.gif', './gifs/cms.gif', './gifs/greenup.gif', './gifs/hidenseek.gif')
+    </script>
 </head>
 
 <body id="body">
@@ -30,20 +40,21 @@
             <a class="projectLink" href="http://www.seanstone.co/cms/">
                 <h2>Hello World CMS/Blog</h2>
                 <div id="cmsImg" class="fader img"></div>
-                <p class="description">Hello World: A Blog About Itself is a custom CMS of my own design and blog about its development.
-                        <br><br><br><br><br><br>Tech: PHP, MySQL, cPanel
-                        <br><br><br><br>
+                <p class="description">Hello World: A Blog About Itself is a custom CMS of my own design and blog about
+                    its development.
+                    <br><br><br><br><br><br>Tech: PHP, MySQL, cPanel
+                    <br><br><br><br>
                 </p>
                 <a class="githubLink" href="https://github.com/smsvt99/CMS-for-blog">See github repo</a>
             </a>
         </div>
-         <!-- tetris -->
+        <!-- tetris -->
         <div class="projectCard target" id="tetrisDiv">
             <a class="projectLink" href="http://tetris.seanstone.co">
                 <h2>React TETRIS</h2>
                 <div id="tetrisImg" class="img fader"></div>
                 <p class="description">My own recreation of the classic. Make sure to check out the scoreboard!
-                        <br><br><br><br><br><br><br>Tech: React, create-react-app</p>
+                    <br><br><br><br><br><br><br>Tech: React, create-react-app</p>
                 <br><br>
                 <a class="githubLink" href='https://github.com/smsvt99/reactTetris'>See github repo</a>
             </a>
@@ -61,7 +72,8 @@
                     integrated, others still forthcoming.<br />
                     <br><br>Tech: HTML, CSS, Bootstrap, jQuery, Filezilla</p>
                 <br><br><br><br>
-                <a class="githubLink" href='https://github.com/smsvt99/stgV2/tree/master/designsFromWix'>See github repo</a>
+                <a class="githubLink" href='https://github.com/smsvt99/stgV2/tree/master/designsFromWix'>See github
+                    repo</a>
             </a>
         </div>
         <!-- Hide-n-seek -->
@@ -84,7 +96,7 @@
                 <h2>YouTube Radio Player</h2>
                 <div id="radioImg" class="img fader"></div>
                 <p class="description">A stylish player and organizer for music on YouTube. No ads or comment sections!
-                        <br><br><br><br>Tech: YouTube player API, cookies, animate.css</p>
+                    <br><br><br><br>Tech: YouTube player API, cookies, animate.css</p>
                 <br><br><br><br>
                 <a class="githubLink" href="https://github.com/smsvt99/youtubeRadio">See github repo</a>
             </a>
@@ -98,40 +110,41 @@
                 <p class="description">My first project! A tool for interacting with the ancient Etruscan document as
                     reported in the writing of Johannes Lydus. A marriage of tech and history.<br><br>Tech: AJAX,
                     Geolocation, Dates </p>
-                    <br><br><br><br>
+                <br><br><br><br>
                 <a class="githubLink" href="https://github.com/smsvt99/Brontoscope">See github repo</a>
             </a>
         </div>
 
         <div class="info">
-                <img class="infoImg" src="./images/bcapicpng.png">
-                <p id="infoText">After earning his MA in Classics from UVM in 2017, Sean changed his focus to the
-                    exciting field
-                    of
-                    Web Development. He attended and graduated from the first ever cohort of Burlington Code
-                    Academy
-                    in the summer of 2018, and is now a freelance developer who spends his free time studying and working on projects to further
-                    his
-                    technical aptitude. He loves learning, solving problems, and being creative.</p>
-                    <br><br>
-                    <ul> 
-                            <li>Call or Text: 
-                                <a href="tel:8023246790">(802) 324-6790</a>
-                            </li>
-                
-                            <li>Email:
-                                <a href="mail-to:smsvt99@gmail.com">smsvt99@gmail.com</a>
-                            </li>
-                        
-                            <li>Linked in: 
-                                <a href="https://www.linkedin.com/in/sean-m-stone/">sean-m-stone</a>
-                            </li>
-                     
-                            <li>Github: 
-                                <a href="https://github.com/smsvt99">smsvt99</a>
-                            </li>
-                
-                        </ul>
+            <img class="infoImg" src="./images/bcapicpng.png">
+            <p id="infoText">After earning his MA in Classics from UVM in 2017, Sean changed his focus to the
+                exciting field
+                of
+                Web Development. He attended and graduated from the first ever cohort of Burlington Code
+                Academy
+                in the summer of 2018, and is now a freelance developer who spends his free time studying and working on
+                projects to further
+                his
+                technical aptitude. He loves learning, solving problems, and being creative.</p>
+            <br><br>
+            <ul>
+                <li>Call or Text:
+                    <a href="tel:8023246790">(802) 324-6790</a>
+                </li>
+
+                <li>Email:
+                    <a href="mail-to:smsvt99@gmail.com">smsvt99@gmail.com</a>
+                </li>
+
+                <li>Linked in:
+                    <a href="https://www.linkedin.com/in/sean-m-stone/">sean-m-stone</a>
+                </li>
+
+                <li>Github:
+                    <a href="https://github.com/smsvt99">smsvt99</a>
+                </li>
+
+            </ul>
 
         </div>
     </div>
@@ -141,8 +154,8 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js'></script>
-    
-  <script src='./script.js'></script>
+
+    <script src='./script.js'></script>
 
 </body>
 
