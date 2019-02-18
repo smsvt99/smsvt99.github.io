@@ -1,298 +1,149 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background: url('./images/background.jpg') no-repeat;
-            background-position: center;
-            background-size: 100%;
-            font-family: Source Code Pro;
-            color: rgb(43, 19, 19);
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        h1 {
-            font-size: 57px;
-            border-color: rgb(43, 19, 19);
-            border-width: 5px;
-            border-style: solid;
-            border-radius: 5px;
-            border-left-width: 25px;
-            border-right-width: 25px;
-            padding-top: 1%;
-            padding-bottom: 1%;
-            text-align: center;
-            margin: 2%;
-        }
-
-        .button {
-            /* float: left; */
-            color: rgb(43, 19, 19);
-            width: 17%;
-            height: 5%;
-            text-align: center;
-            padding: 14px 16px;
-            display: block;
-            font-size: 25px;
-            border-color: rgb(43, 19, 19);
-            border-width: 3px;
-            border-style: solid;
-            border-radius: 5px;
-            border-left-width: 10px;
-            border-right-width: 10px;
-            padding-top: 1%;
-            padding-bottom: 1%;
-            margin: 2%;
-            margin-left: 5%;
-            margin-top: 0;
-            text-decoration: none;
-            z-index: 2;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-            top: 15%;
-            /* transform: translateY(-40%); */
-        }
-
-        .button:hover {
-            color: white;
-            background: rgb(43, 19, 19);
-        }
-
-        #overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: black;
-            opacity: 0;
-            z-index: -1;
-        }
-
-        a {
-            text-decoration: none;
-            color: rgb(43, 19, 19);
-        }
-
-        h1:hover {      
-            color: white;
-            background: rgb(43, 19, 19);
-        }
-
-        .tg {
-            border-collapse: collapse;
-            border-spacing: 0;
-            /* margin-top: 5%; */
-            cursor: pointer;
-            position: absolute;
-            bottom: 0%;
-            width: 100%;
-        }
-
-        .tg td {
-            /* padding: 20px; */
-            /* height: 3%;
-            width: 3%; */
-            /* border-style: solid; */
-            /* border-width: 1px; */
-            overflow: hidden;
-            /* border-color: white; */
-        }
-
-        .tg th {
-            /* padding: 20px */
-            /* height: 3%;
-            width: 3%; */
-            /* border-style: solid; */
-            /* border-width: 1px; */
-            overflow: hidden;
-            /* word-break:normal; */
-            /* border-color: white; */
-        }
-
-        .tg-0lax {
-            background-color: rgb(43, 19, 19);
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
-    <div id="overlay"></div>  
-        <a onclick="fade('index.html')" href="#" id="name">
-            <h1>Sean Michael Stone
-            </h1>
-        </a>
-        <div class="container">
-            <a class="button" onclick="fade('newBio.html')" href="#">Bio</a>
-            <a class="button" onclick="fade('projects.html')" href="#">Projects</a>
-            <a class="button" onclick="fade('contact.html')" href="#">Contact</a>
+<body id="body">
+    <h1 id="title">Sean Michael Stone</h1>
+
+    <!-- GREEN UP -->
+    <div class="container" id="containerOne">
+
+        <div id="greenUpDiv" class="projectCard target">
+            <a class="projectLink" href="https://greenupvermont-de02b.firebaseapp.com/">
+                <h2>Green Up Dashboard</h2>
+                <div id="greenUpImg" class='fader img'></div>
+                <p class="description">Built in conjunction with Code for BTV, this dashboard
+                    queries the data from the Green
+                    Up Vermont app and represents it in a clean, visually interesting and navigable way.
+                    <br><br>
+                    <br><br>Tech: JavaScript ES6, HTML, CSS Grid, Firebase DB, Firebase Hosting, Leaflet
+                    <br>
+                </p>
+                <a class="githubLink" href="https://github.com/smsvt99/greenupDashboard">See github repo</a>
+            </a>
         </div>
-        
-        <table class="tg">
-            <tr id="row1"></tr>
-            <tr id="row2"></tr>
-            <tr id="row3"></tr>
-            <tr id="row4"></tr>
-            <tr id="row5"></tr>
-            <tr id="row6"></tr>
-            <tr id="row7"></tr>
-            <tr id="row8"></tr>
-        </table>
+        <!-- CMS -->
+        <div id="cmsDiv" class="projectCard target">
+            <a class="projectLink" href="http://www.seanstone.co/cms/">
+                <h2>Hello World CMS/Blog</h2>
+                <div id="cmsImg" class="fader img"></div>
+                <p class="description">Hello World: A Blog About Itself is a custom CMS of my own design and blog about its development.
+                        <br><br><br><br><br><br>Tech: PHP, MySQL, cPanel
+                        <br><br><br><br>
+                </p>
+                <a class="githubLink" href="https://github.com/smsvt99/CMS-for-blog">See github repo</a>
+            </a>
+        </div>
+         <!-- tetris -->
+        <div class="projectCard target" id="tetrisDiv">
+            <a class="projectLink" href="http://tetris.seanstone.co">
+                <h2>React TETRIS</h2>
+                <div id="tetrisImg" class="img fader"></div>
+                <p class="description">My own recreation of the classic. Make sure to check out the scoreboard!
+                        <br><br><br><br><br><br><br>Tech: React, create-react-app</p>
+                <br><br>
+                <a class="githubLink" href='https://github.com/smsvt99/reactTetris'>See github repo</a>
+            </a>
+        </div>
 
-        <script>
-        
-        //fadeout and change file
-        let opacity = 0;
-        function fade(filename) {
-            console.log(filename)
-            document.getElementById('overlay').style.zIndex = 1;
-            document.getElementById('overlay').style.opacity = opacity;
-            changeOpacity(filename);
-        }
-        function changeOpacity(filename) {
-            console.log(filename)
-            if (opacity > 1) {
-                window.location.href = filename
-            } else {
-                opacity = opacity + .1
-                setTimeout(function () { fade(filename) }, 30)
-            }
-        }
-        
-        //pixely toy
+    </div>
+    <!-- STG -->
+    <div class="container">
+        <div class="projectCard target" id="stgDiv">
+            <a class="projectLink" href="https://smsvt99.github.io/stg_iframe/#">
+                <h2>STG Pages</h2>
+                <div id="stgImg" class="img fader"></div>
+                <p class="description">
+                    Redesigns of a number of pages and templates for a locally based web app. Some pages already
+                    integrated, others still forthcoming.<br />
+                    <br><br>Tech: HTML, CSS, Bootstrap, jQuery, Filezilla</p>
+                <br><br><br><br>
+                <a class="githubLink" href='https://github.com/smsvt99/stgV2/tree/master/designsFromWix'>See github repo</a>
+            </a>
+        </div>
+        <!-- Hide-n-seek -->
+        <div class="projectCard target" id="hidenSeekDiv">
+            <a class="projectLink" href="https://tranquil-badlands-14071.herokuapp.com/">
+                <h2>Hide-N-Seek</h2>
+                <div id="hidenSeekImg" class="img fader"></div>
+                <p class="description">A simple game of my own design with some creative JavaScript.
+                    Made
+                    for practice and fun. Art by Nintendo.
+                    <br><br><br>Tech: Javascript, HTML, CSS, Node.js, MongoDB, Mlab, Heroku </p>
+                <br><br><br>
+                <a class="githubLink" href="https://github.com/smsvt99/Hide-N-Seek">See github repo</a>
+            </a>
+        </div>
 
-        let counter = 1
-        let animationing;
+        <!-- YOUTUBE RADIO -->
+        <div class="projectCard target" id="radioDiv">
+            <a class="projectLink" href="https://smsvt99.github.io/youtubeRadio/">
+                <h2>YouTube Radio Player</h2>
+                <div id="radioImg" class="img fader"></div>
+                <p class="description">A stylish player and organizer for music on YouTube. No ads or comment sections!
+                        <br><br><br><br>Tech: YouTube player API, cookies, animate.css</p>
+                <br><br><br><br>
+                <a class="githubLink" href="https://github.com/smsvt99/youtubeRadio">See github repo</a>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="projectCard target" id="brontoscopeDiv">
+            <a class="projectLink" href="https://glacial-sierra-69558.herokuapp.com/">
+                <h2>Brontoscopic Calendar</h2>
+                <div id="brontoscopeImg" class="img fader"></div>
+                <p class="description">My first project! A tool for interacting with the ancient Etruscan document as
+                    reported in the writing of Johannes Lydus. A marriage of tech and history.<br><br>Tech: AJAX,
+                    Geolocation, Dates </p>
+                    <br><br><br><br>
+                <a class="githubLink" href="https://github.com/smsvt99/Brontoscope">See github repo</a>
+            </a>
+        </div>
 
-        function generateCells(){
-            for (let i = 1; i <= 256; i++){
-                let cell =  document.createElement('td')
-                cell.setAttribute('class', 'tg-0lax')
-                if (i <= 32){
-                    document.getElementById('row1').appendChild(cell)
-                } else if (i <= 64){
-                    document.getElementById('row2').appendChild(cell)
-                } else if (i <= 96){
-                    document.getElementById('row3').appendChild(cell)
-                } else if (i <= 128){
-                    document.getElementById('row4').appendChild(cell)
-                } else if (i <= 160){
-                    document.getElementById('row5').appendChild(cell)
-                } else if (i <= 192){
-                    document.getElementById('row6').appendChild(cell)
-                } else if (i <= 224){
-                    document.getElementById('row7').appendChild(cell)
-                } else if (i <= 256){
-                    document.getElementById('row8').appendChild(cell)
-                }
-        }
-        }
-        
-        let squares = document.getElementsByClassName("tg-0lax");
+        <div class="info">
+                <img class="infoImg" src="./images/bcapicpng.png">
+                <p id="infoText">After earning his MA in Classics from UVM in 2017, Sean changed his focus to the
+                    exciting field
+                    of
+                    Web Development. He attended and graduated from the first ever cohort of Burlington Code
+                    Academy
+                    in the summer of 2018, and is now a freelance developer who spends his free time studying and working on projects to further
+                    his
+                    technical aptitude. He loves learning, solving problems, and being creative.</p>
+                    <br><br>
+                    <ul> 
+                            <li>Call or Text: 
+                                <a href="tel:8023246790">(802) 324-6790</a>
+                            </li>
+                
+                            <li>Email:
+                                <a href="mail-to:smsvt99@gmail.com">smsvt99@gmail.com</a>
+                            </li>
+                        
+                            <li>Linked in: 
+                                <a href="https://www.linkedin.com/in/sean-m-stone/">sean-m-stone</a>
+                            </li>
+                     
+                            <li>Github: 
+                                <a href="https://github.com/smsvt99">smsvt99</a>
+                            </li>
+                
+                        </ul>
 
+        </div>
+    </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js'></script>
+    
+  <script src='./script.js'></script>
 
-        function animateSquares() {
-            loopAndSortSquares();
-            animationing = setTimeout("animateSquares()", 1250);
-        }
-
-        function handleClick() {
-            counter++
-            if (counter % 2 === 0) {
-                animateSquares();
-            } else {
-                clearTimeout(animationing);
-            }
-
-        }
-
-        function addListeners() {
-            for (let i = 0; i < squares.length; i++) {
-                squares[i].addEventListener('click', handleClick);
-                loopAndSortSquares();
-            }
-        }
-
-        function loopAndSortSquares() {
-            for (let i = 0; i < squares.length; i++) {
-                if (i < 32) {
-                    assignColor(.1, i)
-                } else if (i < 64) {
-                    assignColor(.2, i)
-                } else if (i < 96) {
-                    assignColor(.3, i)
-                } else if (i < 128) {
-                    assignColor(.4, i)
-                } else if (i < 160) {
-                    assignColor(.5, i)
-                } else if (i < 192) {
-                    assignColor(.6, i)
-                } else if (i < 224) {
-                    assignColor(.7, i)
-                } else if (i < 256) {
-                    assignColor(.8, i)
-                }
-            }
-        }
-        function assignColor(num, i) {
-            let randomNumber = Math.random()
-            if (randomNumber > num) {
-                // squares[i].color = 'white';
-                squares[i].style.opacity = 0;
-            } else {
-                // squares[i].color = 'brown';
-                randomColor(i);
-            }
-        }
-        function randomColor(i) {
-            let secondRandomNumber = Math.random();
-            squares[i].style.opacity = secondRandomNumber;
-            if (secondRandomNumber.toPrecision(3) === '0.111') {
-                squares[i].style.backgroundColor = 'red';
-            } else if (secondRandomNumber.toPrecision(4) === '0.2222') {
-                squares[i].style.backgroundColor = 'orange';
-            } else if (secondRandomNumber.toPrecision(3) === '0.333') {
-                squares[i].style.backgroundColor = 'yellow';
-            } else if (secondRandomNumber.toPrecision(4) === '0.4444') {
-                squares[i].style.backgroundColor = 'green';
-            } else if (secondRandomNumber.toPrecision(3) === '0.555') {
-                squares[i].style.backgroundColor = 'blue';
-            } else if (secondRandomNumber.toPrecision(3) === '0.666') {
-                squares[i].style.backgroundColor = 'indigo';
-            } else if (secondRandomNumber.toPrecision(3) === '0.777') {
-                squares[i].style.backgroundColor = 'violet';
-            } else if (secondRandomNumber.toPrecision(3) === '0.888') {
-                squares[i].style.backgroundColor = 'white';
-            } else if (secondRandomNumber.toPrecision(2) === '0.99') {
-                squares[i].style.opacity = 0;
-            }
-        }
-        function setPadding() {
-            let pageWidth = document.documentElement.clientWidth;
-            let squareWidth = pageWidth / 64 + 'px'
-            for (let i = 0; i < squares.length; i++) {
-                squares[i].style.padding = squareWidth;
-            }
-
-        }
-        generateCells()
-        window.addEventListener('resize', setPadding)
-        setPadding()
-
-        addListeners();
-
-    </script>
 </body>
 
 </html>
