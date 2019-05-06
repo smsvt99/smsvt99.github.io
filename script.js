@@ -46,11 +46,17 @@ setUpFades(
     "url('./gifs/stg.gif')",
     "url('./images/freezestg.gif')"
 );
+// setUpFades(
+//     'hidenSeekDiv',
+//     'hidenSeekImg',
+//     "url('./gifs/hidenseek.gif')",
+//     "url('./images/freezehidenseek.gif')"
+// );
 setUpFades(
-    'hidenSeekDiv',
-    'hidenSeekImg',
-    "url('./gifs/hidenseek.gif')",
-    "url('./images/freezehidenseek.gif')"
+    'rpsDiv',
+    'rpsImg',
+    "url('./gifs/rps.gif')",
+    "url('./images/freezerps.gif')"
 );
 setUpFades(
     'radioDiv',
@@ -114,12 +120,20 @@ $(document).ready(function(){
       .setClassToggle('#stgDiv', 'fade-in')
       .addTo(controller)
 
-      var Scene5 = new ScrollMagic.Scene({
-        triggerElement : '#hidenSeekDiv',
+    //   var Scene5 = new ScrollMagic.Scene({
+    //     triggerElement : '#hidenSeekDiv',
+    //       duration: "470",
+    //       offset: 200,
+    //   })
+    //   .setClassToggle('#hidenSeekDiv', 'fade-in')
+    //   .addTo(controller)
+
+    var Scene5 = new ScrollMagic.Scene({
+        triggerElement : '#rpsDiv',
           duration: "470",
           offset: 200,
       })
-      .setClassToggle('#hidenSeekDiv', 'fade-in')
+      .setClassToggle('#rpsDiv', 'fade-in')
       .addTo(controller)
 
       var Scene6 = new ScrollMagic.Scene({
